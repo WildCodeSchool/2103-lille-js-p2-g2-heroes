@@ -1,6 +1,6 @@
 import './Main.scss';
 
-function Main() {
+export default function Main() {
   return (
     <main className="Main">
       <div className="intro">
@@ -22,5 +22,3 @@ function Main() {
     </main>
   );
 }
-
-export default Main;
