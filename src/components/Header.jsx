@@ -12,7 +12,6 @@ const ButtonWrapper = styled.section`
 const Button = styled.button`
   color: white;
   border-radius: 20px;
-
   padding: 18px 30px;
   font-size: 30px;
   outline: none;
