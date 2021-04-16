@@ -2,7 +2,7 @@ import './Header.scss';
 import styled from 'styled-components';
 
 const ButtonWrapper = styled.section`
-  background-color: grey;
+  background-color: #222222;
   padding: 30px;
   display: flex;
   justify-content: space-around;
@@ -10,17 +10,20 @@ const ButtonWrapper = styled.section`
 `;
 
 const Button = styled.button`
+  color: white;
   border-radius: 20px;
+
   padding: 18px 30px;
   font-size: 30px;
   outline: none;
   cursor: pointer;
   border: none;
   transition: transform 0.2s ease;
+  background-color: #222222;
   &:hover {
     background-color: red;
     transform: translateY(-0.5rem) scale(1.02);
-    color: black;
+    color: white;
   }
 `;
 
