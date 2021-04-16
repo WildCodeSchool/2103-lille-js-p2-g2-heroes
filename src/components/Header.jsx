@@ -1,5 +1,16 @@
-import './Header.scss';
 import styled from 'styled-components';
+
+const Sheader = styled.header`
+  padding-top: 30px;
+  background-color: black;
+  color: white;
+`;
+
+const Sh1 = styled.h1`
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+`;
 
 const ButtonWrapper = styled.section`
   background-color: #222222;
@@ -28,8 +39,8 @@ const Button = styled.button`
 
 export default function Header() {
   return (
-    <header className="Header">
-      <h1>SUPER HEROES</h1>
+    <Sheader>
+      <Sh1>SUPER HEROES</Sh1>
       <nav>
         <ButtonWrapper>
           <Button> QUIZ </Button>
@@ -43,6 +54,6 @@ export default function Header() {
           <Button> REQUEST </Button>
         </ButtonWrapper>
       </nav>
-    </header>
+    </Sheader>
   );
 }
