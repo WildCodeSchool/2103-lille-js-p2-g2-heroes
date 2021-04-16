@@ -34,7 +34,13 @@ export default function Header() {
       <nav>
         <ButtonWrapper>
           <Button> QUIZ </Button>
-          <Button> FIGHT </Button>
+          <Button
+            onClick={() =>
+              alert('Please do the quiz to get your own SuperHero!')
+            }
+          >
+            FIGHT
+          </Button>
           <Button> REQUEST </Button>
         </ButtonWrapper>
       </nav>
