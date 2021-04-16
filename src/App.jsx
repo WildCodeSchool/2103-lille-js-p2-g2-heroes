@@ -2,7 +2,7 @@ import Main from './components/Main';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import './reset.css';
-import SuperHerosApi from './components/SuperHerosApi';
+import BlackWidow from './components/superHeros/BlackWidow';
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
       <Header />
       <Main />
       <Footer />
-      <SuperHerosApi />
+      <BlackWidow />
     </div>
   );
 }
