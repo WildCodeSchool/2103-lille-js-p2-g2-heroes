@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const Smain = styled.main`
   background-color: black;
@@ -34,6 +35,11 @@ const Sbutton = styled.button`
   font-size: 20px;
 `;
 
+const Slink = styled(Link)`
+  text-decoration: none;
+  color: inherit;
+`;
+
 export default function Main() {
   return (
     <Smain>
@@ -46,7 +52,9 @@ export default function Main() {
           test to learn more about your superhero profile. You can then make your 
           hero fight, face to face! Put on your best costume, because now it's your turn.`}
         </Stext>
-        <Sbutton type="button">QUIZ</Sbutton>
+        <Sbutton type="button">
+          <Slink to="/quiz">QUIZ</Slink>
+        </Sbutton>
       </Sintro>
       <Spicture>
         <img src="/justice-league-new-52.jpg" alt="Justice-League" />

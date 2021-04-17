@@ -1,14 +1,21 @@
-import Main from './components/Main';
-import Header from './components/Header';
-import Footer from './components/Footer';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Home from './components/Home';
+import QuizPage from './components/QuizPage';
 import './reset.css';
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Main />
-      <Footer />
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/quiz">
+            <QuizPage />
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }
