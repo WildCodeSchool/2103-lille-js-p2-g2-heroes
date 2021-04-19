@@ -5,32 +5,29 @@ const Sh1 = styled.h1`
   text-align: center;
   font-size: 2.5em;
   color: #dedede;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 `;
 
 const ButtonWrapper = styled.section`
   background-color: #222222;
-  padding: 30px;
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  padding-left: 20vw;
+  padding-right: 20vw;
+  box-shadow: 0px 5px 10px black;
 `;
 
 const Button = styled.button`
-  color: white;
-  border-radius: 20px;
-  padding: 18px 30px;
-  font-size: 30px;
-  outline: none;
-  cursor: pointer;
-  border: none;
-  transition: transform 0.2s ease;
+  color: #dedede;
   background-color: #222222;
+  font-size: 1.5em;
+  border: none;
+  cursor: pointer;
+  padding-top: 20px;
+  padding-bottom: 20px;
   &:hover {
-    background-color: red;
-    transform: translateY(-0.5rem) scale(1.02);
-    color: white;
+    color: #c17400;
   }
 `;
 
