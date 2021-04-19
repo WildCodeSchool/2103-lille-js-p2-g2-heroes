@@ -1,16 +1,12 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-const Sheader = styled.header`
-  padding-top: 30px;
-  background-color: black;
-  color: white;
-`;
-
 const Sh1 = styled.h1`
   text-align: center;
-  font-size: 40px;
-  font-weight: bold;
+  font-size: 2.5em;
+  color: #dedede;
+  padding-top: 20px;
+  padding-bottom: 20px;
 `;
 
 const ButtonWrapper = styled.section`
@@ -45,7 +41,7 @@ const Slink = styled(Link)`
 
 export default function Header() {
   return (
-    <Sheader>
+    <header>
       <Sh1>
         <Slink to="/">SUPER HEROES</Slink>
       </Sh1>
@@ -64,6 +60,6 @@ export default function Header() {
           <Button> REQUEST </Button>
         </ButtonWrapper>
       </nav>
-    </Sheader>
+    </header>
   );
 }
