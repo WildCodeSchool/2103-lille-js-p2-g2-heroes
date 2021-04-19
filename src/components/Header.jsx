@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const Sheader = styled.header`
   padding-top: 30px;
@@ -37,13 +38,22 @@ const Button = styled.button`
   }
 `;
 
+const Slink = styled(Link)`
+  text-decoration: none;
+  color: inherit;
+`;
+
 export default function Header() {
   return (
     <Sheader>
-      <Sh1>SUPER HEROES</Sh1>
+      <Sh1>
+        <Slink to="/">SUPER HEROES</Slink>
+      </Sh1>
       <nav>
         <ButtonWrapper>
-          <Button> QUIZ </Button>
+          <Button>
+            <Slink to="/quiz">QUIZ</Slink>
+          </Button>
           <Button
             onClick={() =>
               alert('Please do the quiz to get your own SuperHero!')
