@@ -7,26 +7,29 @@ const Smain = styled.main`
 `;
 
 const Sarticle = styled.article`
+  width: 70%;
+  margin: 0 auto;
+`;
+
+const Stoto = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
 `;
 
 const Stext = styled.p`
-  font-size: 1em;
+  font-size: 2em;
+  line-height: 1.5em;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 5px;
-  padding: 50px;
+  padding: 25px;
   margin: 20px;
 `;
 
-const Stoto = styled.div`
-  width: 70%;
-`;
-
 const Spicture = styled.picture`
-  img {
-    height: 100%;
+  .superGirl {
+    width: 30vw;
+    margin-top: 30px;
   }
 `;
 
@@ -64,7 +67,11 @@ export default function Main() {
             hero fight, face to face! Put on your best costume, because now it's your turn.`}
           </Stext>
           <Spicture>
-            <img src="/super-girl.png" alt="Justice-League" />
+            <img
+              className="superGirl"
+              src="/super-girl.png"
+              alt="Justice-League"
+            />
           </Spicture>
         </Stoto>
       </Sarticle>
