@@ -37,12 +37,13 @@ const Sbutton = styled.button`
   font-family: 'Bebas neue', sans-serif;
   color: #dedede;
   font-size: 1.7em;
-  border-radius: 10px;
+  border-radius: 5px;
   height: 50px;
   width: 200px;
   background-color: #c17400;
   border: 0px;
   margin-bottom: 5px;
+  box-shadow: 0px 5px 10px black;
 `;
 
 const Slink = styled(Link)`
