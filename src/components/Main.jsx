@@ -18,8 +18,8 @@ const Stoto = styled.div`
 `;
 
 const Stext = styled.p`
-  font-size: 2em;
-  line-height: 1.5em;
+  font-size: 1.3em;
+  line-height: 1.3em;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 5px;
   padding: 25px;
