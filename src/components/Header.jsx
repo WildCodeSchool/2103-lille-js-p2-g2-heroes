@@ -2,8 +2,9 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 const Sh1 = styled.h1`
+  font-family: 'Fjalla One', sans-serif;
   text-align: center;
-  font-size: 2.5em;
+  font-size: 3em;
   color: #dedede;
   padding-top: 30px;
   padding-bottom: 30px;
