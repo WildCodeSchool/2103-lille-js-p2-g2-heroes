@@ -16,7 +16,7 @@ const Sh1 = styled.h1`
 
 const ButtonWrapper = styled.section`
   background-color: #222222;
-  padding: 30px;
+  padding: 20px;
   display: flex;
   justify-content: space-around;
   align-items: center;
