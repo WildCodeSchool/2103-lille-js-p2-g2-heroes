@@ -32,9 +32,25 @@ const Button = styled.button`
   transition: transform 0.2s ease;
   background-color: #222222;
   &:hover {
-    background-color: red;
+    background-color: #222222;
     transform: translateY(-0.5rem) scale(1.02);
     color: white;
+  }
+  &:after{
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+  &:hover:after{
+    width: 100%; 
+    left: 0; 
   }
 `;
 
