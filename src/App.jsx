@@ -5,6 +5,7 @@ import QuizPage from './components/QuizPage';
 import './reset.css';
 
 const SApp = styled.div`
+  font-family: 'PT Serif', sans-serif;
   background-image: url('/background-deus-ex-02.jpg');
 `;
 
