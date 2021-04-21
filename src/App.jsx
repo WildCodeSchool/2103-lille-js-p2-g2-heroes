@@ -14,6 +14,9 @@ function App() {
           <Route path="/quiz">
             <QuizPage />
           </Route>
+          <Route path="/results/:int/:spe/:str/:pow">
+            <p>?</p>
+          </Route>
         </Switch>
       </Router>
     </div>
