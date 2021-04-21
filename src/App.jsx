@@ -6,24 +6,22 @@ import './reset.css';
 
 const SApp = styled.div`
   font-family: 'Quando', sans-serif;
-  background-image: url('/background-deus-ex-02.jpg');
+  background-image: url('/background-deus-ex-01.jpg');
 `;
 
 function App() {
   return (
     <SApp>
-      <div className="App">
-        <Router>
-          <Switch>
-            <Route exact path="/">
-              <Home />
-            </Route>
-            <Route path="/quiz">
-              <QuizPage />
-            </Route>
-          </Switch>
-        </Router>
-      </div>
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/quiz">
+            <QuizPage />
+          </Route>
+        </Switch>
+      </Router>
     </SApp>
   );
 }
