@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import logo from '../superhero.gif';
 
 const Sheader = styled.header`
   padding-top: 30px;
@@ -32,7 +33,7 @@ const Button = styled.button`
   transition: transform 0.2s ease;
   background-color: #222222;
   &:hover {
-    background-color: #222222;
+    background-color: #222222l;
     transform: translateY(-0.5rem) scale(1.02);
     color: white;
   }
@@ -59,24 +60,42 @@ const Slink = styled(Link)`
   color: inherit;
 `;
 
+const Padd = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
+const Myimg = styled.img`
+  width: 150px;
+  height: 150px;
+`;
+
+const MiddleButton = styled(Button)`
+  position: relative;
+  left: 30px;
+`;
+
 export default function Header() {
   return (
     <Sheader>
       <Sh1>
         <Slink to="/">SUPER HEROES</Slink>
       </Sh1>
+      <Padd>
+        <Myimg src={logo} alt="Logo" />
+      </Padd>
       <nav>
         <ButtonWrapper>
           <Button>
             <Slink to="/quiz">QUIZ</Slink>
           </Button>
-          <Button
+          <MiddleButton
             onClick={() =>
               alert('Please do the quiz to get your own SuperHero!')
             }
           >
             FIGHT
-          </Button>
+          </MiddleButton>
           <Button> REQUEST </Button>
         </ButtonWrapper>
       </nav>
