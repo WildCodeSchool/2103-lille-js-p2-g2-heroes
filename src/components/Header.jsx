@@ -24,7 +24,7 @@ const ButtonWrapper = styled.section`
 
 const Button = styled.button`
   color: white;
-  border-radius: 20px;git 
+  border-radius: 20px;
   padding: 18px 30px;
   font-size: 30px;
   outline: none;
@@ -37,10 +37,10 @@ const Button = styled.button`
     transform: translateY(-0.5rem) scale(1.02);
     color: white;
   }
-  &:after{
+  &:after {
     background: none repeat scroll 0 0 transparent;
     bottom: 0;
-    content: "";
+    content: '';
     display: block;
     height: 2px;
     left: 50%;
@@ -49,9 +49,9 @@ const Button = styled.button`
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
     width: 0;
   }
-  &:hover:after{
-    width: 100%; 
-    left: 0; 
+  &:hover:after {
+    width: 100%;
+    left: 0;
   }
 `;
 
