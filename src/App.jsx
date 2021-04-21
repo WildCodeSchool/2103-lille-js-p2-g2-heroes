@@ -6,26 +6,28 @@ import './reset.css';
 
 const SApp = styled.div`
   font-family: 'Quando', sans-serif;
+<<<<<<< HEAD
   background-image: url('/background-deus-ex-02.jpg');
   height: 100vh;
   width: 100vw;
+=======
+  background-image: url('/background-deus-ex-01.jpg');
+>>>>>>> c943b6834c429c5fbbda6b50402cc9dbccb1bedb
 `;
 
 function App() {
   return (
     <SApp>
-      <div className="App">
-        <Router>
-          <Switch>
-            <Route exact path="/">
-              <Home />
-            </Route>
-            <Route path="/quiz">
-              <QuizPage />
-            </Route>
-          </Switch>
-        </Router>
-      </div>
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/quiz">
+            <QuizPage />
+          </Route>
+        </Switch>
+      </Router>
     </SApp>
   );
 }
