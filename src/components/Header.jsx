@@ -1,5 +1,17 @@
-import './Header.scss';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+
+const Sheader = styled.header`
+  padding-top: 30px;
+  background-color: black;
+  color: white;
+`;
+
+const Sh1 = styled.h1`
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+`;
 
 const ButtonWrapper = styled.section`
   background-color: #222222;
@@ -26,13 +38,22 @@ const Button = styled.button`
   }
 `;
 
+const Slink = styled(Link)`
+  text-decoration: none;
+  color: inherit;
+`;
+
 export default function Header() {
   return (
-    <header className="Header">
-      <h1>SUPER HEROES</h1>
+    <Sheader>
+      <Sh1>
+        <Slink to="/">SUPER HEROES</Slink>
+      </Sh1>
       <nav>
         <ButtonWrapper>
-          <Button> QUIZ </Button>
+          <Button>
+            <Slink to="/quiz">QUIZ</Slink>
+          </Button>
           <Button
             onClick={() =>
               alert('Please do the quiz to get your own SuperHero!')
@@ -43,6 +64,6 @@ export default function Header() {
           <Button> REQUEST </Button>
         </ButtonWrapper>
       </nav>
-    </header>
+    </Sheader>
   );
 }
