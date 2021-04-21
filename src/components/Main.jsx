@@ -14,7 +14,7 @@ const Sarticle = styled.article`
 const Stoto = styled.div`
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: flex-start;
 `;
 
 const Stext = styled.p`
@@ -23,13 +23,13 @@ const Stext = styled.p`
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 5px;
   padding: 25px;
-  margin: 20px;
+  margin-top: 125px;
 `;
 
 const Spicture = styled.picture`
   .superGirl {
     width: 30vw;
-    margin-top: 30px;
+    margin-top: 25px;
   }
 `;
 
@@ -42,7 +42,7 @@ const Sbutton = styled.button`
   width: 200px;
   background-color: #c17400;
   border: 0px;
-  margin-bottom: 5px;
+  margin-top: 25px;
   box-shadow: 0px 5px 10px black;
 `;
 
@@ -61,14 +61,21 @@ export default function Main() {
     <Smain>
       <Sarticle>
         <Stoto>
-          <Stext>
-            {`They fascinate with their powers, their charisma or their bank 
+          <div>
+            <Stext>
+              {`They fascinate with their powers, their charisma or their bank 
             account. 
             What superhero are you? 
             Take the time to take our personality 
             test to learn more about your superhero profile. You can then make your 
             hero fight, face to face! Put on your best costume, because now it's your turn.`}
-          </Stext>
+            </Stext>
+            <Abutton>
+              <Sbutton type="button" className="button">
+                <Slink to="/quiz">QUIZ</Slink>
+              </Sbutton>
+            </Abutton>
+          </div>
           <Spicture>
             <img
               className="superGirl"
@@ -78,11 +85,6 @@ export default function Main() {
           </Spicture>
         </Stoto>
       </Sarticle>
-      <Abutton>
-        <Sbutton type="button" className="button">
-          <Slink to="/quiz">QUIZ</Slink>
-        </Sbutton>
-      </Abutton>
     </Smain>
   );
 }
