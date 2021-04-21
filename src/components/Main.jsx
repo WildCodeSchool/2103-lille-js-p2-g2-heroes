@@ -34,11 +34,13 @@ const Spicture = styled.picture`
 `;
 
 const Sbutton = styled.button`
+  font-family: 'Bebas neue', sans-serif;
+  color: #dedede;
+  font-size: 1.7em;
   border-radius: 10px;
   height: 50px;
   width: 200px;
   background-color: #c17400;
-  font-size: 20px;
   border: 0px;
   margin-bottom: 5px;
 `;
