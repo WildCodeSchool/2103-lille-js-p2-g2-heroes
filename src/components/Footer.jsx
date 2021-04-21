@@ -5,7 +5,6 @@ const SFooter = styled.footer`
   color: #555555;
   font-size: 0.7em;
   padding: 30px;
-  margin-top: 50px;
   box-shadow: 0px -5px 10px black;
   display: flex;
   justify-content: center;
