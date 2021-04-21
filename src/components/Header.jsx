@@ -20,6 +20,7 @@ const ButtonWrapper = styled.section`
 `;
 
 const Button = styled.button`
+  font-family: 'Fjalla One', sans-serif;
   color: #dedede;
   background-color: #222222;
   font-size: 1.5em;
