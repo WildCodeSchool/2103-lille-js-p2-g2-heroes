@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 const Sh1 = styled.h1`
-  font-family: 'Fjalla One', sans-serif;
+  font-family: 'Bebas neue', sans-serif;
   text-align: center;
   font-size: 3em;
   color: #dedede;
@@ -20,14 +20,14 @@ const ButtonWrapper = styled.section`
 `;
 
 const Button = styled.button`
-  font-family: 'Fjalla One', sans-serif;
+  font-family: 'Bebas neue', sans-serif;
   color: #dedede;
   background-color: #222222;
-  font-size: 1.5em;
+  font-size: 1.7em;
   border: none;
   cursor: pointer;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   &:hover {
     color: #c17400;
   }
