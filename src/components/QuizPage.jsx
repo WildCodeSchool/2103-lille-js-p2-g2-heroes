@@ -189,7 +189,7 @@ export default function QuizPage() {
         },
         {
           content:
-            'You brave danger by burning yourself, but the girl is safe and sound ',
+            'You brave the danger by burning yourself, but the girl is safe and sound ',
           stat: 'strenght',
           value: 10,
         },
