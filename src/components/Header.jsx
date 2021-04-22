@@ -16,7 +16,6 @@ const Sh1 = styled.h1`
 
 const ButtonWrapper = styled.section`
   background-color: #222222;
-  padding: 20px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -35,7 +34,7 @@ const Button = styled.button`
   &:hover {
     background-color: #222222l;
     transform: translateY(-0.5rem) scale(1.02);
-    color: white;
+    color: #c17400;
   }
   &:after {
     background: none repeat scroll 0 0 transparent;
