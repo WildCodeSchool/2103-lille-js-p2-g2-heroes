@@ -51,6 +51,7 @@ const Button = styled.button`
   &:hover:after {
     width: 100%;
     left: 0;
+    color: #c17400;
   }
 `;
 
