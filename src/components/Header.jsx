@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import logo from '../superhero.gif';
 
 const Sh1 = styled.h1`
   font-family: 'Bebas neue', sans-serif;
@@ -29,6 +30,25 @@ const Button = styled.button`
   padding-top: 15px;
   padding-bottom: 15px;
   &:hover {
+    background-color: #222222l;
+    transform: translateY(-0.5rem) scale(1.02);
+    color: #c17400;
+  }
+  &:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: '';
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+  &:hover:after {
+    width: 100%;
+    left: 0;
     color: #c17400;
   }
 `;
@@ -38,24 +58,42 @@ const Slink = styled(Link)`
   color: inherit;
 `;
 
+const Padd = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
+const Myimg = styled.img`
+  width: 150px;
+  height: 150px;
+`;
+
+const MiddleButton = styled(Button)`
+  position: relative;
+  left: 30px;
+`;
+
 export default function Header() {
   return (
     <header>
       <Sh1>
         <Slink to="/">SUPER HEROES</Slink>
       </Sh1>
+      <Padd>
+        <Myimg src={logo} alt="Logo" />
+      </Padd>
       <nav>
         <ButtonWrapper>
           <Button>
             <Slink to="/quiz">QUIZ</Slink>
           </Button>
-          <Button
+          <MiddleButton
             onClick={() =>
               alert('Please do the quiz to get your own SuperHero!')
             }
           >
             FIGHT
-          </Button>
+          </MiddleButton>
           <Button> REQUEST </Button>
         </ButtonWrapper>
       </nav>
