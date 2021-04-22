@@ -7,13 +7,13 @@ const Smain = styled.main`
 `;
 
 const Sarticle = styled.article`
-  width: 70%;
+  width: 60%;
   margin: 0 auto;
 `;
 
 const Stoto = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: flex-start;
 `;
 
@@ -28,7 +28,7 @@ const Stext = styled.p`
 
 const Spicture = styled.picture`
   .superGirl {
-    width: 30vw;
+    width: 25vw;
     margin-top: 25px;
   }
 `;
