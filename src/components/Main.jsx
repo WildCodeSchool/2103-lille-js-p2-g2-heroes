@@ -79,8 +79,8 @@ export default function Main() {
           <Spicture>
             <img
               className="superGirl"
-              src="/super-girl.png"
-              alt="Justice-League"
+              src="/super-girl-modify.png"
+              alt="Super Girl"
             />
           </Spicture>
         </Stoto>
