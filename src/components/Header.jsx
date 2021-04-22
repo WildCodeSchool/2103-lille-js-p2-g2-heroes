@@ -30,7 +30,6 @@ const Button = styled.button`
   padding-top: 15px;
   padding-bottom: 15px;
   &:hover {
-<<<<<<< HEAD
     background-color: #222222l;
     transform: translateY(-0.5rem) scale(1.02);
     color: #c17400;
@@ -50,8 +49,6 @@ const Button = styled.button`
   &:hover:after {
     width: 100%;
     left: 0;
-=======
->>>>>>> d2a47a918240d52a38bf9e15736dd2e9b98cb2cc
     color: #c17400;
   }
 `;

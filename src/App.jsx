@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import styled from 'styled-components';
 import Home from './components/Home';
 import QuizPage from './components/QuizPage';
+import Results from './components/Results';
 import './reset.css';
 
 const SApp = styled.div`
@@ -23,7 +24,7 @@ function App() {
             <QuizPage />
           </Route>
           <Route path="/results/:int/:spe/:str/:pow">
-            <p>?</p>
+            <Results />
           </Route>
         </Switch>
       </Router>
