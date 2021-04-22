@@ -1,40 +1,35 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-const Sheader = styled.header`
-  padding-top: 30px;
-  background-color: black;
-  color: white;
-`;
-
 const Sh1 = styled.h1`
+  font-family: 'Bebas neue', sans-serif;
   text-align: center;
-  font-size: 40px;
-  font-weight: bold;
+  font-size: 3em;
+  color: #dedede;
+  padding-top: 30px;
+  padding-bottom: 30px;
 `;
 
 const ButtonWrapper = styled.section`
   background-color: #222222;
-  padding: 30px;
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  padding-left: 20vw;
+  padding-right: 20vw;
+  box-shadow: 0px 5px 10px black;
 `;
 
 const Button = styled.button`
-  color: white;
-  border-radius: 20px;
-  padding: 18px 30px;
-  font-size: 30px;
-  outline: none;
-  cursor: pointer;
-  border: none;
-  transition: transform 0.2s ease;
+  font-family: 'Bebas neue', sans-serif;
+  color: #dedede;
   background-color: #222222;
+  font-size: 1.7em;
+  border: none;
+  cursor: pointer;
+  padding-top: 15px;
+  padding-bottom: 15px;
   &:hover {
-    background-color: red;
-    transform: translateY(-0.5rem) scale(1.02);
-    color: white;
+    color: #c17400;
   }
 `;
 
@@ -45,7 +40,7 @@ const Slink = styled(Link)`
 
 export default function Header() {
   return (
-    <Sheader>
+    <header>
       <Sh1>
         <Slink to="/">SUPER HEROES</Slink>
       </Sh1>
@@ -64,6 +59,6 @@ export default function Header() {
           <Button> REQUEST </Button>
         </ButtonWrapper>
       </nav>
-    </Sheader>
+    </header>
   );
 }

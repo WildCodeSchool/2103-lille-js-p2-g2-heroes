@@ -2,37 +2,48 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 const Smain = styled.main`
-  background-color: black;
-  color: white;
-  display: flex;
-  justify-content: center;
-  height: 100vh;
+  color: #dedede;
+  align-items: center;
 `;
 
-const Sintro = styled.div`
-  width: 50vw;
-  padding: 120px;
+const Sarticle = styled.article`
+  width: 70%;
+  margin: 0 auto;
+`;
+
+const Stoto = styled.div`
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
 `;
 
 const Stext = styled.p`
-  font-size: 50px;
-  text-align: center;
-  padding-bottom: 50px;
+  font-size: 1.3em;
+  line-height: 1.3em;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  padding: 25px;
+  margin-top: 125px;
 `;
 
 const Spicture = styled.picture`
-  width: 50vw;
-  padding: 60px;
+  .superGirl {
+    width: 30vw;
+    margin-top: 25px;
+  }
 `;
 
 const Sbutton = styled.button`
-  float: right;
-  border-radius: 10px;
+  font-family: 'Bebas neue', sans-serif;
+  color: #dedede;
+  font-size: 1.7em;
+  border-radius: 5px;
   height: 50px;
   width: 200px;
-  background-color: darkred;
-  font-weight: bold;
-  font-size: 20px;
+  background-color: #c17400;
+  border: 0px;
+  margin-top: 25px;
+  box-shadow: 0px 5px 10px black;
 `;
 
 const Slink = styled(Link)`
@@ -40,25 +51,40 @@ const Slink = styled(Link)`
   color: inherit;
 `;
 
+const Abutton = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
 export default function Main() {
   return (
     <Smain>
-      <Sintro>
-        <Stext>
-          {`They fascinate with their powers, their charisma or their bank 
-          account. 
-          What superhero are you? 
-          Take the time to take our personality 
-          test to learn more about your superhero profile. You can then make your 
-          hero fight, face to face! Put on your best costume, because now it's your turn.`}
-        </Stext>
-        <Sbutton type="button">
-          <Slink to="/quiz">QUIZ</Slink>
-        </Sbutton>
-      </Sintro>
-      <Spicture>
-        <img src="/justice-league-new-52.jpg" alt="Justice-League" />
-      </Spicture>
+      <Sarticle>
+        <Stoto>
+          <div>
+            <Stext>
+              {`They fascinate with their powers, their charisma or their bank 
+            account. 
+            What superhero are you? 
+            Take the time to take our personality 
+            test to learn more about your superhero profile. You can then make your 
+            hero fight, face to face! Put on your best costume, because now it's your turn.`}
+            </Stext>
+            <Abutton>
+              <Sbutton type="button" className="button">
+                <Slink to="/quiz">QUIZ</Slink>
+              </Sbutton>
+            </Abutton>
+          </div>
+          <Spicture>
+            <img
+              className="superGirl"
+              src="/super-girl.png"
+              alt="Justice-League"
+            />
+          </Spicture>
+        </Stoto>
+      </Sarticle>
     </Smain>
   );
 }
