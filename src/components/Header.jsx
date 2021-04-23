@@ -8,7 +8,6 @@ const Sh1 = styled.h1`
   font-size: 3em;
   color: #dedede;
   padding-top: 30px;
-  padding-bottom: 30px;
 `;
 
 const ButtonWrapper = styled.section`
@@ -30,9 +29,8 @@ const Button = styled.button`
   padding-top: 15px;
   padding-bottom: 15px;
   &:hover {
-    background-color: #222222l;
+    background-color: transparent;
     transform: translateY(-0.5rem) scale(1.02);
-    color: #c17400;
   }
   &:after {
     background: none repeat scroll 0 0 transparent;
@@ -61,11 +59,13 @@ const Slink = styled(Link)`
 const Padd = styled.div`
   display: flex;
   justify-content: center;
+  margin: 20px;
 `;
 
 const Myimg = styled.img`
   width: 150px;
   height: 150px;
+  border-radius: 100px;
 `;
 
 const MiddleButton = styled(Button)`
@@ -79,9 +79,11 @@ export default function Header() {
       <Sh1>
         <Slink to="/">SUPER HEROES</Slink>
       </Sh1>
+
       <Padd>
         <Myimg src={logo} alt="Logo" />
       </Padd>
+
       <nav>
         <ButtonWrapper>
           <Button>
