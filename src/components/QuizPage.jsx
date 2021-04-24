@@ -186,9 +186,29 @@ export default function QuizPage() {
         },
       ],
     },
+    {
+      questionText: 'What is the seventh question ?',
+      answerOptions: [
+        {
+          content: 'answer 1',
+          stat: 'female',
+          value: 1,
+        },
+        {
+          content: 'answer 2',
+          stat: 'male',
+          value: 1,
+        },
+        {
+          content: 'answer 3',
+          stat: 'whatever',
+          value: 1,
+        },
+      ],
+    },
   ];
 
-  const handleAnswerOptionClick = (e, answerOption) => {
+  const handleAnswerOptionClick = (answerOption) => {
     if (answerOption.stat === 'intelligence') {
       setInt(int + answerOption.value);
     }
@@ -230,7 +250,7 @@ export default function QuizPage() {
         {questions[currentQuestion].answerOptions.map((answerOption) => (
           <button
             type="button"
-            onClick={(e) => handleAnswerOptionClick(e, answerOption)}
+            onClick={() => handleAnswerOptionClick(answerOption)}
           >
             {answerOption.content}
           </button>

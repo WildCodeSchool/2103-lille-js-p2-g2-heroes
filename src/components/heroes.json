@@ -1,0 +1,103 @@
+[
+  {
+    "id": 165,
+    "name": "Catwoman",
+    "gender": "female"
+  },
+
+  {
+    "id": 309,
+    "name": "Harley Quinn",
+    "gender": "female"
+  },
+  {
+    "id": 315,
+    "name": "HawkGirl",
+    "gender": "female"
+  },
+  {
+    "id": 414,
+    "name": "SuperGirl",
+    "gender": "female"
+  },
+  {
+    "id": 579,
+    "name": "Scarlet Witch",
+    "gender": "female"
+  },
+  {
+    "id": 156,
+    "name": "Captain Marvel",
+    "gender": "female"
+  },
+  {
+    "id": 522,
+    "name": "Poison Ivy",
+    "gender": "female"
+  },
+  {
+    "id": 107,
+    "name": "Black Widow",
+    "gender": "female"
+  },
+  {
+    "id": 275,
+    "name": "Gamora",
+    "gender": "female"
+  },
+  {
+    "id": 720,
+    "name": "Wonder Woman",
+    "gender": "female"
+  },
+  {
+    "id": 332,
+    "name": "Hulk",
+    "gender": "male"
+  },
+  {
+    "id": 370,
+    "name": "Joker",
+    "gender": "male"
+  },
+  {
+    "id": 414,
+    "name": "Loki",
+    "gender": "male"
+  },
+  {
+    "id": 423,
+    "name": "Magneto",
+    "gender": "male"
+  },
+  {
+    "id": 655,
+    "name": "Thanos",
+    "gender": "male"
+  },
+  {
+    "id": 644,
+    "name": "Superman",
+    "gender": "male"
+  },
+  {
+    "id": 346,
+    "name": "Ironman",
+    "gender": "male"
+  },
+  {
+    "id": 620,
+    "name": "Spiderman",
+    "gender": "male"
+  },
+  {
+    "id": 69,
+    "name": "Batman",
+    "gender": "male"
+  },
+  {
+    "id": 630,
+    "name": "Star-Lord",
+    "gender": "male"
+  }
+]
