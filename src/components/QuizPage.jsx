@@ -186,26 +186,6 @@ export default function QuizPage() {
         },
       ],
     },
-    {
-      questionText: 'What is the seventh question ?',
-      answerOptions: [
-        {
-          content: 'answer 1',
-          stat: 'female',
-          value: 1,
-        },
-        {
-          content: 'answer 2',
-          stat: 'male',
-          value: 1,
-        },
-        {
-          content: 'answer 3',
-          stat: 'whatever',
-          value: 1,
-        },
-      ],
-    },
   ];
 
   const handleAnswerOptionClick = (answerOption) => {

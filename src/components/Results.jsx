@@ -26,7 +26,7 @@ export default function Results() {
     }
     return stat;
   };
-  const getHeroes = () => {
+  useEffect(() => {
     const tmpHeroes = [];
     const chosenStat = getStat();
 
@@ -46,11 +46,8 @@ export default function Results() {
         )
       );
     }, 1000);
-  };
-  useEffect(() => {
-    getHeroes();
   }, []);
-  console.log(myHeroes);
+
   return (
     <>
       {myHeroes.length === 0 && <p>Loading</p>}
