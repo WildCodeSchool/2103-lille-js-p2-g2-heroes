@@ -1,12 +1,13 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 // import ResultCard from './ResultCard';
-import { useParams } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
 import heroes from './heroes.json';
 
 export default function Results() {
   const { int, spe, str, pow } = useParams();
   const [myHeroes, setMyHeroes] = useState([]);
+  const history = useHistory();
 
   const getStat = () => {
     let stat;
@@ -48,6 +49,10 @@ export default function Results() {
     }, 1000);
   }, []);
 
+  const handleClick = () => {
+    history.push(`/fight/${myHeroes[0]}`);
+  };
+
   return (
     <>
       {myHeroes.length === 0 && <p>Loading</p>}
@@ -57,6 +62,9 @@ export default function Results() {
             <h1>{`You are ${myHeroes[0].name}`}</h1>
             <img src={myHeroes[0].image.url} alt="" />
           </div>
+          <button type="button" onClick={handleClick}>
+            Go fight...
+          </button>
         </div>
       )}
     </>
