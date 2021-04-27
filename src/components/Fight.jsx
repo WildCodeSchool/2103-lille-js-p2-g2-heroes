@@ -1,10 +1,13 @@
-import { useParams } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 export default function Fight() {
-  const { myHero } = useParams();
+  const location = useLocation();
+
   return (
     <div>
-      <img src={myHero.image.url} alt="héros" />
+      <img src={location.state.myHero.image.url} alt="héros" />
+      <p>VS</p>
+      <img src={location.state.vsHero.image.url} alt="vshéros" />
     </div>
   );
 }

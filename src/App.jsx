@@ -27,7 +27,7 @@ function App() {
           <Route path="/results/:int/:spe/:str/:pow">
             <Results />
           </Route>
-          <Route path="/fight/:myHero">
+          <Route path="/fight">
             <Fight />
           </Route>
         </Switch>
