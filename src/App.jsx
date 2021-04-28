@@ -7,7 +7,7 @@ import './reset.css';
 
 const SApp = styled.div`
   font-family: 'Quando', sans-serif;
-  background-image: url('/background-deus-ex-02.jpg');
+  background-image: url('/backgroud-modify.jpg');
   min-height: 100vh;
   min-width: 100vw;
 `;
