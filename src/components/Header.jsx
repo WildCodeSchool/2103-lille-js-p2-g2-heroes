@@ -10,10 +10,10 @@ const Sh1 = styled.h1`
   font-size: 3em;
   color: #dedede;
   margin-right: 60px;
+  padding: 10px;
   @media (max-width: 768px) {
     font-size: 2.9em;
     margin-right: 0px;
-    padding: 10px;
   }
 `;
 
