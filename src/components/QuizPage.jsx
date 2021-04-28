@@ -12,7 +12,7 @@ export default function QuizPage() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const history = useHistory();
 
-  const Answer = styled.button`
+  const Answer = styled.div`
     display: flex;
     flex-direction: column;
     width: 70%;
@@ -24,8 +24,9 @@ export default function QuizPage() {
         width: 50%;
   `;
 
-  const Button = styled.button`
-    display: block;
+  const Button = styled.div`
+    display: flex;
+    justify-content: center;
     border: transparent;
     border-radius: 10px;
     padding: 10px 30px;
@@ -49,7 +50,6 @@ export default function QuizPage() {
   const Question = styled.div`
     display: flex;
     justify-content: center;
-
     padding: 10px 30px;
     color: white;
     background-color: #222222;
