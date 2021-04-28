@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import styled from 'styled-components';
 import Header from './Header';
+import questions from '../Question';
 
 export default function QuizPage() {
   const [int, setInt] = useState(0);
@@ -10,183 +12,73 @@ export default function QuizPage() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const history = useHistory();
 
-  const questions = [
-    {
-      questionText: 'What is the first question ?',
-      answerOptions: [
-        {
-          content: 'answer 1',
-          stat: 'intelligence',
-          value: 10,
-        },
-        {
-          content: 'answer 2',
-          stat: 'speed',
-          value: 10,
-        },
-        {
-          content: 'answer 3',
-          stat: 'strenght',
-          value: 10,
-        },
-        {
-          content: 'answer 4',
-          stat: 'power',
-          value: 10,
-        },
-      ],
-    },
-    {
-      questionText: 'What is the second question ?',
-      answerOptions: [
-        {
-          content: 'answer 1',
-          stat: 'intelligence',
-          value: 10,
-        },
-        {
-          content: 'answer 2',
-          stat: 'speed',
-          value: 10,
-        },
-        {
-          content: 'answer 3',
-          stat: 'strenght',
-          value: 10,
-        },
-        {
-          content: 'answer 4',
-          stat: 'power',
-          value: 10,
-        },
-      ],
-    },
-    {
-      questionText: 'What is the third question ?',
-      answerOptions: [
-        {
-          content: 'answer 1',
-          stat: 'intelligence',
-          value: 10,
-        },
-        {
-          content: 'answer 2',
-          stat: 'speed',
-          value: 10,
-        },
-        {
-          content: 'answer 3',
-          stat: 'strenght',
-          value: 10,
-        },
-        {
-          content: 'answer 4',
-          stat: 'power',
-          value: 10,
-        },
-      ],
-    },
-    {
-      questionText: 'What is the fourth question ?',
-      answerOptions: [
-        {
-          content: 'answer 1',
-          stat: 'intelligence',
-          value: 10,
-        },
-        {
-          content: 'answer 2',
-          stat: 'speed',
-          value: 10,
-        },
-        {
-          content: 'answer 3',
-          stat: 'strenght',
-          value: 10,
-        },
-        {
-          content: 'answer 4',
-          stat: 'power',
-          value: 10,
-        },
-      ],
-    },
-    {
-      questionText: 'What is the fifth question ?',
-      answerOptions: [
-        {
-          content: 'answer 1',
-          stat: 'intelligence',
-          value: 10,
-        },
-        {
-          content: 'answer 2',
-          stat: 'speed',
-          value: 10,
-        },
-        {
-          content: 'answer 3',
-          stat: 'strenght',
-          value: 10,
-        },
-        {
-          content: 'answer 4',
-          stat: 'power',
-          value: 10,
-        },
-      ],
-    },
-    {
-      questionText: 'What is the sixth question ?',
-      answerOptions: [
-        {
-          content: 'answer 1',
-          stat: 'intelligence',
-          value: 10,
-        },
-        {
-          content: 'answer 2',
-          stat: 'speed',
-          value: 10,
-        },
-        {
-          content: 'answer 3',
-          stat: 'strenght',
-          value: 10,
-        },
-        {
-          content: 'answer 4',
-          stat: 'power',
-          value: 10,
-        },
-      ],
-    },
-    {
-      questionText: 'What is the seventh question ?',
-      answerOptions: [
-        {
-          content: 'answer 1',
-          stat: 'intelligence',
-          value: 10,
-        },
-        {
-          content: 'answer 2',
-          stat: 'speed',
-          value: 10,
-        },
-        {
-          content: 'answer 3',
-          stat: 'strenght',
-          value: 10,
-        },
-        {
-          content: 'answer 4',
-          stat: 'power',
-          value: 10,
-        },
-      ],
-    },
-  ];
+  const Answer = styled.button`
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 2em auto;
+    background-color: transparent;
+    border: transparent;
+    margin-top: 40px;
+    @media screen and (min-width: 1180px) {
+        width: 50%;
+  `;
+
+  const Button = styled.button`
+    display: block;
+    border: transparent;
+    border-radius: 10px;
+    padding: 10px 30px;
+    color: white;
+    background-color: #222222;
+    transition: 0.3s;
+    font-size: 2em;
+    outline: none;
+    user-select: none;
+    margin-top: 0.3em;
+    cursor: pointer;
+    font-family: 'Bebas neue', sans-serif;
+    @media screen and (min-width: 1180px) {
+      &:hover {
+        color: white;
+        background-color: #616a94;
+      }
+    }
+  `;
+
+  const Question = styled.div`
+    display: flex;
+    justify-content: center;
+
+    padding: 10px 30px;
+    color: white;
+    background-color: #222222;
+    font-family: 'Bebas neue', sans-serif;
+    font-size: 2em;
+  `;
+
+  const Questioncount = styled.div`
+    display: flex;
+    justify-content: center;
+
+    padding: 10px 30px;
+    color: white;
+    background-color: #222222;
+    font-size: 1.5em;
+    font-family: 'Bebas neue', sans-serif;
+  `;
+
+  const Blocquestion = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin: 2em auto;
+  background-color: transparent;
+  border: transparent;
+  margin-top: 40px;
+  @media screen and (min-width: 1180px) {
+      width: 50%;
+  `;
 
   const handleAnswerOptionClick = (answerOption) => {
     if (answerOption.stat === 'intelligence') {
@@ -219,23 +111,23 @@ export default function QuizPage() {
       <Header />
 
       <div className="question-section">
-        <div className="question-count">
-          <span>Question {currentQuestion + 1}</span>/{questions.length}
-        </div>
-        <div className="question-text">
-          {questions[currentQuestion].questionText}
-        </div>
+        <Blocquestion>
+          <Questioncount>
+            <span>Question {currentQuestion + 1}</span>/{questions.length}
+          </Questioncount>
+          <Question>{questions[currentQuestion].questionText}</Question>
+        </Blocquestion>
       </div>
-      <div className="answer-section">
+      <Answer>
         {questions[currentQuestion].answerOptions.map((answerOption) => (
-          <button
+          <Button
             type="button"
             onClick={() => handleAnswerOptionClick(answerOption)}
           >
             {answerOption.content}
-          </button>
+          </Button>
         ))}
-      </div>
+      </Answer>
     </div>
   );
 }
