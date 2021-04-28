@@ -7,17 +7,26 @@ const SShadow = styled.div`
 const SFooter = styled.footer`
   background-color: #222222;
   color: #555555;
-  font-size: 0.7em;
-  padding: 30px;
+  font-size: 0.5em;
+  padding: 20px;
   box-shadow: 0px -6px 5px black;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
 `;
 
 const SCopyright = styled.div`
-  text-align: center;
+  text-align: right;
   line-height: 1.5em;
   width: 30vw;
+  @media (max-width: 1024px) {
+    width: 40vw;
+  }
+  @media (max-width: 768px) {
+    width: 50vw;
+  }
+  @media (max-width: 425px) {
+    width: 90vw;
+  }
 `;
 
 export default function Footer() {

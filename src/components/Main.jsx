@@ -31,6 +31,7 @@ const Stext = styled.p`
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 5px;
   padding: 1.5em;
+  margin-top: 2em;
   @media (max-width: 1024px) {
     font-size: 1.2em;
   }
