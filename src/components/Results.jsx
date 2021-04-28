@@ -1,16 +1,14 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-// import ResultCard from './ResultCard';
-import { useHistory, useParams, Link } from 'react-router-dom';
-import heroes from './heroes.json';
+import { useParams, Link } from 'react-router-dom';
+import heroes from '../heroes.json';
 
 export default function Results() {
   const { int, spe, str, pow } = useParams();
   const [myHeroes, setMyHeroes] = useState([]);
-  const history = useHistory();
 
   const getStat = () => {
-    let stat;
+    let stat = 'intelligence';
     if (int > spe && int > str && int > pow) {
       stat = 'intelligence';
     }
@@ -22,8 +20,6 @@ export default function Results() {
     }
     if (pow > int && pow > str && pow > spe) {
       stat = 'power';
-    } else {
-      stat = 'intelligence';
     }
     return stat;
   };
@@ -43,15 +39,11 @@ export default function Results() {
     setTimeout(() => {
       setMyHeroes(
         tmpHeroes.filter(
-          (hero) => parseInt(hero.powerstats[chosenStat], 10) > 90
+          (hero) => parseInt(hero.powerstats[chosenStat], 10) > 80
         )
       );
     }, 1000);
   }, []);
-
-  const handleClick = () => {
-    history.push('/fight', { myHero: `${myHeroes[0]}` });
-  };
 
   return (
     <>
@@ -68,9 +60,7 @@ export default function Results() {
               state: { myHero: myHeroes[0], vsHero: myHeroes[1] },
             }}
           >
-            <button type="button" onClick={handleClick}>
-              Go fight...
-            </button>
+            Go fight...
           </Link>
         </div>
       )}
