@@ -9,6 +9,7 @@ const Sh1 = styled.h1`
   font-family: 'Bebas neue', sans-serif;
   font-size: 3em;
   color: #dedede;
+  margin-right: 60px;
 `;
 
 const ButtonWrapper = styled.section`
@@ -67,7 +68,6 @@ const Myimg = styled.img`
 
 const MiddleButton = styled(Button)`
   position: relative;
-  left: 30px;
 `;
 
 export default function Header() {
