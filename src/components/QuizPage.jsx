@@ -188,7 +188,7 @@ export default function QuizPage() {
     },
   ];
 
-  const handleAnswerOptionClick = (e, answerOption) => {
+  const handleAnswerOptionClick = (answerOption) => {
     if (answerOption.stat === 'intelligence') {
       setInt(int + answerOption.value);
     }
@@ -230,7 +230,7 @@ export default function QuizPage() {
         {questions[currentQuestion].answerOptions.map((answerOption) => (
           <button
             type="button"
-            onClick={(e) => handleAnswerOptionClick(e, answerOption)}
+            onClick={() => handleAnswerOptionClick(answerOption)}
           >
             {answerOption.content}
           </button>

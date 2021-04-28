@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Home from './components/Home';
 import QuizPage from './components/QuizPage';
 import Results from './components/Results';
+import Fight from './components/Fight';
 import './reset.css';
 
 const SApp = styled.div`
@@ -25,6 +26,9 @@ function App() {
           </Route>
           <Route path="/results/:int/:spe/:str/:pow">
             <Results />
+          </Route>
+          <Route path="/fight">
+            <Fight />
           </Route>
         </Switch>
       </Router>
