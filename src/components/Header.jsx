@@ -3,11 +3,13 @@ import { Link } from 'react-router-dom';
 import logo from '../superhero.gif';
 
 const Sh1 = styled.h1`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: 'Bebas neue', sans-serif;
-  text-align: center;
   font-size: 3em;
   color: #dedede;
-  padding-top: 30px;
+  margin-right: 60px;
 `;
 
 const ButtonWrapper = styled.section`
@@ -56,12 +58,6 @@ const Slink = styled(Link)`
   color: inherit;
 `;
 
-const Padd = styled.div`
-  display: flex;
-  justify-content: center;
-  margin: 20px;
-`;
-
 const Myimg = styled.img`
   width: 150px;
   height: 150px;
@@ -70,20 +66,15 @@ const Myimg = styled.img`
 
 const MiddleButton = styled(Button)`
   position: relative;
-  left: 30px;
 `;
 
 export default function Header() {
   return (
     <header>
       <Sh1>
+        <Myimg src={logo} alt="Logo" />
         <Slink to="/">SUPER HEROES</Slink>
       </Sh1>
-
-      <Padd>
-        <Myimg src={logo} alt="Logo" />
-      </Padd>
-
       <nav>
         <ButtonWrapper>
           <Button>
