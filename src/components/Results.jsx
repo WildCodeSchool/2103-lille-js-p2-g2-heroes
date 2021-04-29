@@ -13,7 +13,8 @@ const Hero = styled.div`
     font-family: 'Bebas neue', sans-serif;
     font-size: 2.4em;
     color: #dedede;
-    margin: 0.5em;
+    margin-top: 5vh;
+    margin-bottom: 0.5em;
   }
 
   img {
