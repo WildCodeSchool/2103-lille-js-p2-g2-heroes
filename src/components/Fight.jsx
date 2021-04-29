@@ -5,12 +5,11 @@ export default function Fight() {
 
   return (
     <>
-      {!location.state && (
+      {!location.state ? (
         <div>
           <p>Please do the quiz to get your own SuperHero!</p>
         </div>
-      )}
-      {location.state && (
+      ) : (
         <div>
           <img src={location.state.myHero.image.url} alt="héros" />
           <p>VS</p>
