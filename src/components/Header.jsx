@@ -20,6 +20,7 @@ const Sh1 = styled.h1`
 const ButtonWrapper = styled.section`
   background-color: #222222;
   display: flex;
+
   justify-content: space-around;
   padding-left: 20vw;
   padding-right: 20vw;
@@ -36,6 +37,7 @@ const Button = styled.button`
   background-color: #222222;
   font-size: 1.7em;
   border: none;
+  position: relative;
   cursor: pointer;
   padding-top: 15px;
   padding-bottom: 15px;
@@ -63,6 +65,9 @@ const Button = styled.button`
 `;
 
 const Slink = styled(Link)`
+  display: flex;
+  align-items: center;
+
   text-decoration: none;
   color: inherit;
   margin-top: 0.2em;
@@ -79,8 +84,10 @@ export default function Header() {
   return (
     <header>
       <Sh1>
-        <Myimg src={logo} alt="Logo" />
-        <Slink to="/">SUPER HEROES</Slink>
+        <Slink to="/">
+          <Myimg src={logo} alt="Logo" />
+          <p>SUPER HEROES</p>
+        </Slink>
       </Sh1>
       <nav>
         <ButtonWrapper>
