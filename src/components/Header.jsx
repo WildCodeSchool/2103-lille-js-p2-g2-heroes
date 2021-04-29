@@ -64,10 +64,6 @@ const Myimg = styled.img`
   border-radius: 100px;
 `;
 
-const MiddleButton = styled(Button)`
-  position: relative;
-`;
-
 export default function Header() {
   return (
     <header>
@@ -80,13 +76,9 @@ export default function Header() {
           <Button>
             <Slink to="/quiz">QUIZ</Slink>
           </Button>
-          <MiddleButton
-            onClick={() =>
-              alert('Please do the quiz to get your own SuperHero!')
-            }
-          >
-            FIGHT
-          </MiddleButton>
+          <Button>
+            <Slink to="/fight">FIGHT</Slink>
+          </Button>
           <Button> REQUEST </Button>
         </ButtonWrapper>
       </nav>
