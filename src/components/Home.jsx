@@ -25,10 +25,6 @@ const Stext = styled.p`
   @media (max-width: 1440px) {
     width: 40vw;
   }
-  @media (max-width: 1024px) {
-    font-size: 1.2em;
-    width: 50vw;
-  }
   @media (max-width: 1000px) {
     margin-top: 1em;
     width: 80vw;
@@ -50,6 +46,10 @@ const Sbutton = styled.div`
   p {
     text-align: center;
     padding-top: 12px;
+  }
+  @media (max-width: 1024px) {
+    font-size: 1.2em;
+    margin-bottom: 10vh;
   }
 `;
 
