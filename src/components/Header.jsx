@@ -10,6 +10,11 @@ const Sh1 = styled.h1`
   font-size: 3em;
   color: #dedede;
   margin-right: 60px;
+  padding: 10px;
+  @media (max-width: 768px) {
+    font-size: 2.9em;
+    margin-right: 0px;
+  }
 `;
 
 const ButtonWrapper = styled.section`
@@ -19,6 +24,10 @@ const ButtonWrapper = styled.section`
   padding-left: 20vw;
   padding-right: 20vw;
   box-shadow: 0px 5px 10px black;
+  @media (max-width: 768px) {
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
 `;
 
 const Button = styled.button`
@@ -56,11 +65,13 @@ const Button = styled.button`
 const Slink = styled(Link)`
   text-decoration: none;
   color: inherit;
+  margin-top: 0.2em;
 `;
 
 const Myimg = styled.img`
-  width: 150px;
-  height: 150px;
+  width: 1.5em;
+  height: 1.5em;
+  margin-right: 0.2em;
   border-radius: 100px;
 `;
 

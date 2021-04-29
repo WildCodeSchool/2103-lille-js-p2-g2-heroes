@@ -7,14 +7,22 @@ const Smain = styled.main`
 `;
 
 const Sarticle = styled.article`
-  width: 60%;
+  width: 60vw;
   margin: 0 auto;
+  @media (max-width: 1024px) {
+    width: 80vw;
+  }
+  @media (max-width: 768px) {
+    width: 75vw;
+  }
+  @media (max-width: 425px) {
+    width: 90vw;
+  }
 `;
 
 const Stoto = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  align-items: flex-end;
 `;
 
 const Stext = styled.p`
@@ -22,14 +30,26 @@ const Stext = styled.p`
   line-height: 1.3em;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 5px;
-  padding: 25px;
-  margin-top: 125px;
+  padding: 1.5em;
+  margin-top: 2em;
+  @media (max-width: 1024px) {
+    font-size: 1.2em;
+  }
+  @media (max-width: 768px) {
+    margin-top: 1em;
+  }
 `;
 
 const Spicture = styled.picture`
   .superGirl {
     width: 25vw;
-    margin-top: 25px;
+    margin-top: 1em;
+    @media (max-width: 1024px) {
+      width: 35vw;
+    }
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
 `;
 
@@ -43,6 +63,7 @@ const Sbutton = styled.button`
   background-color: #c17400;
   border: 0px;
   margin-top: 25px;
+  margin-bottom: 75px;
   box-shadow: 0px 5px 10px black;
 `;
 
