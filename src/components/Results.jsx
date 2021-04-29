@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useParams, Link } from 'react-router-dom';
@@ -20,7 +20,6 @@ const Hero = styled.div`
     height: 50vh;
     border-radius: 5px;
     box-shadow: 0px 5px 10px black;
-    }
   }
 
   button {
@@ -40,6 +39,30 @@ const Hero = styled.div`
     text-decoration: none;
     color: #dedede;
   }
+`;
+
+const rotate360 = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+`;
+
+const Spinner = styled.div`
+  margin: 20vh 50vw;
+  padding: 20px;
+  animation: ${rotate360} 1s linear infinite;
+  transform: translateZ(0);
+  border-top: 2px solid grey;
+  border-right: 2px solid grey;
+  border-bottom: 2px solid grey;
+  border-left: 4px solid black;
+  background: transparent;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
 `;
 
 export default function Results() {
@@ -86,7 +109,7 @@ export default function Results() {
 
   return (
     <>
-      {myHeroes.length === 0 && <p>Loading</p>}
+      {myHeroes.length === 0 && <Spinner />}
       {myHeroes.length > 0 && (
         <div className="hero">
           <Hero>
