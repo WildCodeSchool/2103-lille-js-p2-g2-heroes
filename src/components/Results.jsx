@@ -101,7 +101,7 @@ export default function Results() {
     setTimeout(() => {
       setMyHeroes(
         tmpHeroes.filter(
-          (hero) => parseInt(hero.powerstats[chosenStat], 10) > 80
+          (hero) => parseInt(hero.powerstats[chosenStat], 10) > 85
         )
       );
     }, 1000);
