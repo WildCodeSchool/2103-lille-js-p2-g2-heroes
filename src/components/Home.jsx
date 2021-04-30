@@ -7,50 +7,27 @@ const Smain = styled.main`
   align-items: center;
 `;
 
-const Sarticle = styled.article`
-  width: 60vw;
-  margin: 0 auto;
-  @media (max-width: 1024px) {
-    width: 80vw;
-  }
-  @media (max-width: 768px) {
-    width: 75vw;
-  }
-  @media (max-width: 425px) {
-    width: 90vw;
-  }
-`;
-
 const Stoto = styled.div`
   display: flex;
   align-items: flex-end;
+  justify-content: center;
 `;
 
+const Sarticle = styled.div``;
+
 const Stext = styled.p`
+  width: 30vw;
   font-size: 1.3em;
   line-height: 1.3em;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 5px;
   padding: 1.5em;
-  margin-top: 2em;
-  @media (max-width: 1024px) {
-    font-size: 1.2em;
+  @media (max-width: 1440px) {
+    width: 40vw;
   }
-  @media (max-width: 768px) {
+  @media (max-width: 1000px) {
     margin-top: 1em;
-  }
-`;
-
-const Spicture = styled.picture`
-  .superGirl {
-    width: 25vw;
-    margin-top: 1em;
-    @media (max-width: 1024px) {
-      width: 35vw;
-    }
-    @media (max-width: 768px) {
-      display: none;
-    }
+    width: 80vw;
   }
 `;
 
@@ -64,11 +41,29 @@ const Sbutton = styled.div`
   background-color: #c17400;
   border: 0px;
   margin-top: 25px;
-  margin-bottom: 75px;
+  margin-bottom: 20vh;
   box-shadow: 0px 5px 10px black;
   p {
     text-align: center;
     padding-top: 12px;
+  }
+  @media (max-width: 1024px) {
+    font-size: 1.2em;
+    margin-bottom: 10vh;
+  }
+`;
+
+const Spicture = styled.picture`
+  .superGirl {
+    width: 50vh;
+    margin-top: 8vh;
+    }
+    @media (max-width: 1024px) {
+      width: 30vh;
+    }
+    @media (max-width: 1000px) {
+      display: none;
+    }
   }
 `;
 
@@ -85,34 +80,32 @@ const Abutton = styled.div`
 export default function Home() {
   return (
     <Smain>
-      <Sarticle>
-        <Stoto>
-          <div>
-            <Stext>
-              {`They fascinate with their powers, their charisma or their bank 
+      <Stoto>
+        <Sarticle>
+          <Stext>
+            {`They fascinate with their powers, their charisma or their bank 
             account. 
             Which superhero are you? 
             Take the time to take our personality 
             test to learn more about your superhero profile. You can then make your 
             hero fight, face to face! Put on your best costume, because now it's your turn.`}
-            </Stext>
-            <Abutton>
-              <Slink to="/quiz">
-                <Sbutton type="button" className="button">
-                  <p>QUIZ</p>
-                </Sbutton>
-              </Slink>
-            </Abutton>
-          </div>
-          <Spicture>
-            <img
-              className="superGirl"
-              src="/super-girl-modify.png"
-              alt="Super Girl"
-            />
-          </Spicture>
-        </Stoto>
-      </Sarticle>
+          </Stext>
+          <Abutton>
+            <Slink to="/quiz">
+              <Sbutton type="button" className="button">
+                <p>QUIZ</p>
+              </Sbutton>
+            </Slink>
+          </Abutton>
+        </Sarticle>
+        <Spicture>
+          <img
+            className="superGirl"
+            src="/super-girl-modify.png"
+            alt="Super Girl"
+          />
+        </Spicture>
+      </Stoto>
       <Footer />
     </Smain>
   );
