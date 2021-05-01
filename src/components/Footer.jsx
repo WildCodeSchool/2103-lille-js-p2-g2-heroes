@@ -1,10 +1,14 @@
 import styled from 'styled-components';
 
 const SShadow = styled.div`
-  box-shadow: 0 50vh 0 50vh #222222;
+  /* box-shadow: 0 50vh 0 50vh #222222; */
 `;
 
 const SFooter = styled.footer`
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   background-color: #222222;
   color: #555555;
   font-size: 0.5em;

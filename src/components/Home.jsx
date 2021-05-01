@@ -3,17 +3,17 @@ import { Link } from 'react-router-dom';
 import Footer from './Footer';
 
 const Smain = styled.main`
+  min-height: 100%;
   color: #dedede;
   align-items: center;
 `;
 
 const Stoto = styled.div`
   display: flex;
-  align-items: flex-end;
   justify-content: center;
+  align-items: center;
+  min-height: 80vh;
 `;
-
-const Sarticle = styled.div``;
 
 const Stext = styled.p`
   width: 30vw;
@@ -26,7 +26,6 @@ const Stext = styled.p`
     width: 40vw;
   }
   @media (max-width: 1000px) {
-    margin-top: 1em;
     width: 80vw;
   }
 `;
@@ -41,25 +40,17 @@ const Sbutton = styled.div`
   background-color: #c17400;
   border: 0px;
   margin-top: 25px;
-  margin-bottom: 20vh;
   box-shadow: 0px 5px 10px black;
   p {
     text-align: center;
     padding-top: 12px;
   }
-  @media (max-width: 1024px) {
-    font-size: 1.2em;
-    margin-bottom: 10vh;
-  }
 `;
 
 const Spicture = styled.picture`
   .superGirl {
-    width: 50vh;
-    margin-top: 8vh;
-    }
-    @media (max-width: 1024px) {
-      width: 30vh;
+    width: 56vh;
+    margin-top: 5vh;
     }
     @media (max-width: 1000px) {
       display: none;
@@ -81,7 +72,7 @@ export default function Home() {
   return (
     <Smain>
       <Stoto>
-        <Sarticle>
+        <div>
           <Stext>
             {`They fascinate with their powers, their charisma or their bank 
             account. 
@@ -97,11 +88,11 @@ export default function Home() {
               </Sbutton>
             </Slink>
           </Abutton>
-        </Sarticle>
+        </div>
         <Spicture>
           <img
             className="superGirl"
-            src="/super-girl-modify.png"
+            src="/super-girl-02.png"
             alt="Super Girl"
           />
         </Spicture>

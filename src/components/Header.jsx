@@ -2,6 +2,14 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import logo from '../superhero.gif';
 
+const Myimg = styled.img`
+  width: 1.5em;
+  height: 1.5em;
+  margin-right: 0.2em;
+  border-radius: 100px;
+  display: none;
+`;
+
 const Sh1 = styled.h1`
   display: flex;
   align-items: center;
@@ -15,6 +23,7 @@ const Sh1 = styled.h1`
     font-size: 2.9em;
     margin-right: 0px;
   }
+  display: none;
 `;
 
 const ButtonWrapper = styled.section`
@@ -71,13 +80,6 @@ const Slink = styled(Link)`
   text-decoration: none;
   color: inherit;
   margin-top: 0.2em;
-`;
-
-const Myimg = styled.img`
-  width: 1.5em;
-  height: 1.5em;
-  margin-right: 0.2em;
-  border-radius: 100px;
 `;
 
 export default function Header() {
