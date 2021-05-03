@@ -1,10 +1,56 @@
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 import { useState } from 'react';
 import styled from 'styled-components';
 
 const Result = styled.div`
   .versus.hidden {
     display: none;
+  }
+`;
+
+const Conditional = styled.div`
+  p {
+    text-align: center;
+    margin: 5em auto 2em;
+    padding: 30px;
+    border: transparent;
+    border-radius: 10px;
+    width: 50%;
+    color: white;
+    background-color: #222222;
+    font-family: 'Bebas neue', sans-serif;
+    font-size: 2em;
+  }
+`;
+
+const Slink = styled(Link)`
+  text-decoration: none;
+  color: inherit;
+`;
+
+const Abutton = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
+const Sbutton = styled.div`
+  font-family: 'Bebas neue', sans-serif;
+  color: #dedede;
+  font-size: 1.7em;
+  border-radius: 5px;
+  height: 50px;
+  width: 200px;
+  background-color: #c17400;
+  border: 0px;
+  margin-bottom: 20vh;
+  box-shadow: 0px 5px 10px black;
+  h1 {
+    text-align: center;
+    padding-top: 12px;
+  }
+  @media (max-width: 1024px) {
+    font-size: 1.2em;
+    margin-bottom: 10vh;
   }
 `;
 
@@ -57,9 +103,16 @@ export default function Fight() {
   return (
     <>
       {!location.state ? (
-        <div>
-          <p>Please do the quiz to get your own SuperHero !</p>
-        </div>
+        <Conditional>
+          <p>Please do the quiz to get your own SuperHero !!!</p>
+          <Abutton>
+            <Slink to="/quiz">
+              <Sbutton type="button" className="button">
+                <h1>QUIZ</h1>
+              </Sbutton>
+            </Slink>
+          </Abutton>
+        </Conditional>
       ) : (
         <Result>
           <div className={`versus ${isActive ? 'hidden' : ''}`}>
