@@ -5,6 +5,7 @@ import QuizPage from './components/QuizPage';
 import Results from './components/Results';
 import Fight from './components/Fight';
 import Header from './components/Header';
+import Request from './components/Request';
 import './reset.css';
 
 const SApp = styled.div`
@@ -31,6 +32,9 @@ function App() {
           </Route>
           <Route path="/fight">
             <Fight />
+          </Route>
+          <Route path="/request">
+            <Request />
           </Route>
         </Switch>
       </Router>

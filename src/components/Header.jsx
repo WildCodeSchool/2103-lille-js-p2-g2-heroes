@@ -97,7 +97,9 @@ export default function Header() {
           <Button>
             <Slink to="/fight">FIGHT</Slink>
           </Button>
-          <Button> REQUEST </Button>
+          <Button>
+            <Slink to="/request">REQUEST</Slink>
+          </Button>
         </ButtonWrapper>
       </nav>
     </header>
