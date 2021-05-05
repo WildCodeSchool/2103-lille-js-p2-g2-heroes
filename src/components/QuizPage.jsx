@@ -120,6 +120,7 @@ export default function QuizPage() {
       <Answer>
         {questions[currentQuestion].answerOptions.map((answerOption) => (
           <Button
+            key={answerOption.content}
             type="button"
             onClick={() => handleAnswerOptionClick(answerOption)}
           >
