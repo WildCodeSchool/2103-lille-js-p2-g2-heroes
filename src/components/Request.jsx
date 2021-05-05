@@ -30,7 +30,7 @@ const Article = styled.div`
     justify-content: center;
   }
 
-  h1 {
+  h2 {
     display: flex;
     margin-bottom: 20px;
   }
@@ -111,15 +111,15 @@ export default function Request() {
 
         <form className="RequestForm" onSubmit={handleSubmit}>
           <label htmlFor="username">
-            <h1>LastName</h1>
+            <h2>LastName</h2>
             <input placeholder="Parker" name="lastname" id="username" />
           </label>
           <label htmlFor="username">
-            <h1>FirstName</h1>
+            <h2>FirstName</h2>
             <input placeholder="Peter" name="firstname" id="username" />
           </label>
           <label htmlFor="username">
-            <h1>email</h1>
+            <h2>email</h2>
             <input
               placeholder="peter.parker@nyc.us"
               name="email"
@@ -127,7 +127,7 @@ export default function Request() {
             />
           </label>
           <label htmlFor="username">
-            <h1>SupeHero requested</h1>
+            <h2>SupeHero requested</h2>
             <textarea
               className="text"
               type="textarea"
@@ -139,7 +139,7 @@ export default function Request() {
           {submitting && <Loading>Submitting Form...</Loading>}
           <Abutton>
             <Sbutton type="submit" className="button">
-              <h2>SUBMIT</h2>
+              <h3>SUBMIT</h3>
             </Sbutton>
           </Abutton>
         </form>
