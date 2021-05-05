@@ -2,6 +2,13 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import logo from '../superhero.gif';
 
+const Myimg = styled.img`
+  width: 1.5em;
+  height: 1.5em;
+  margin-right: 0.2em;
+  border-radius: 100px;
+`;
+
 const Sh1 = styled.h1`
   display: flex;
   align-items: center;
@@ -20,7 +27,6 @@ const Sh1 = styled.h1`
 const ButtonWrapper = styled.section`
   background-color: #222222;
   display: flex;
-
   justify-content: space-around;
   padding-left: 20vw;
   padding-right: 20vw;
@@ -67,17 +73,9 @@ const Button = styled.button`
 const Slink = styled(Link)`
   display: flex;
   align-items: center;
-
   text-decoration: none;
   color: inherit;
   margin-top: 0.2em;
-`;
-
-const Myimg = styled.img`
-  width: 1.5em;
-  height: 1.5em;
-  margin-right: 0.2em;
-  border-radius: 100px;
 `;
 
 export default function Header() {
