@@ -10,15 +10,25 @@ const Sh1 = styled.h1`
   font-size: 3em;
   color: #dedede;
   margin-right: 60px;
+  padding: 10px;
+  @media (max-width: 768px) {
+    font-size: 2.9em;
+    margin-right: 0px;
+  }
 `;
 
 const ButtonWrapper = styled.section`
   background-color: #222222;
   display: flex;
+
   justify-content: space-around;
   padding-left: 20vw;
   padding-right: 20vw;
   box-shadow: 0px 5px 10px black;
+  @media (max-width: 768px) {
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
 `;
 
 const Button = styled.button`
@@ -27,6 +37,7 @@ const Button = styled.button`
   background-color: #222222;
   font-size: 1.7em;
   border: none;
+  position: relative;
   cursor: pointer;
   padding-top: 15px;
   padding-bottom: 15px;
@@ -54,39 +65,38 @@ const Button = styled.button`
 `;
 
 const Slink = styled(Link)`
+  display: flex;
+  align-items: center;
+
   text-decoration: none;
   color: inherit;
+  margin-top: 0.2em;
 `;
 
 const Myimg = styled.img`
-  width: 150px;
-  height: 150px;
+  width: 1.5em;
+  height: 1.5em;
+  margin-right: 0.2em;
   border-radius: 100px;
-`;
-
-const MiddleButton = styled(Button)`
-  position: relative;
 `;
 
 export default function Header() {
   return (
     <header>
       <Sh1>
-        <Myimg src={logo} alt="Logo" />
-        <Slink to="/">SUPER HEROES</Slink>
+        <Slink to="/">
+          <Myimg src={logo} alt="Logo" />
+          <p>SUPER HEROES</p>
+        </Slink>
       </Sh1>
       <nav>
         <ButtonWrapper>
           <Button>
             <Slink to="/quiz">QUIZ</Slink>
           </Button>
-          <MiddleButton
-            onClick={() =>
-              alert('Please do the quiz to get your own SuperHero!')
-            }
-          >
-            FIGHT
-          </MiddleButton>
+          <Button>
+            <Slink to="/fight">FIGHT</Slink>
+          </Button>
           <Button> REQUEST </Button>
         </ButtonWrapper>
       </nav>

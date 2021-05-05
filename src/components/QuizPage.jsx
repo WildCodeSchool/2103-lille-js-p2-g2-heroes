@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import styled from 'styled-components';
-import Header from './Header';
 import questions from '../Question';
 
 export default function QuizPage() {
@@ -21,12 +20,17 @@ export default function QuizPage() {
     border: transparent;
     margin-top: 40px;
     @media screen and (min-width: 1180px) {
-        width: 50%;
+      width: 50%;
+    }
   `;
 
   const Button = styled.div`
+<<<<<<< HEAD
     display: flex;
     justify-content: center;
+=======
+    display: block;
+>>>>>>> b5b1c08bd5d8dbacfdf41e1941ba01e9a02acff3
     border: transparent;
     border-radius: 10px;
     padding: 10px 30px;
@@ -69,15 +73,16 @@ export default function QuizPage() {
   `;
 
   const Blocquestion = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 70%;
-  margin: 2em auto;
-  background-color: transparent;
-  border: transparent;
-  margin-top: 40px;
-  @media screen and (min-width: 1180px) {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 2em auto;
+    background-color: transparent;
+    border: transparent;
+    margin-top: 40px;
+    @media screen and (min-width: 1180px) {
       width: 50%;
+    }
   `;
 
   const handleAnswerOptionClick = (answerOption) => {
@@ -108,8 +113,6 @@ export default function QuizPage() {
 
   return (
     <div className="QuizPage">
-      <Header />
-
       <div className="question-section">
         <Blocquestion>
           <Questioncount>
