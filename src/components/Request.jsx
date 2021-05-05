@@ -30,7 +30,7 @@ const Article = styled.div`
     justify-content: center;
   }
 
-  p {
+  h1 {
     display: flex;
     margin-bottom: 20px;
   }
@@ -88,7 +88,6 @@ const Sbutton = styled.button`
 
 const Loading = styled.div`
   font-family: 'Bebas neue', sans-serif;
-
   width: 30%;
   color: white;
   font-size: 1.8em;
@@ -112,15 +111,15 @@ export default function Request() {
 
         <form className="RequestForm" onSubmit={handleSubmit}>
           <label htmlFor="username">
-            <p>LastName</p>
+            <h1>LastName</h1>
             <input placeholder="Parker" name="lastname" id="username" />
           </label>
           <label htmlFor="username">
-            <p>FirstName</p>
+            <h1>FirstName</h1>
             <input placeholder="Peter" name="firstname" id="username" />
           </label>
           <label htmlFor="username">
-            <p>email</p>
+            <h1>email</h1>
             <input
               placeholder="peter.parker@nyc.us"
               name="email"
@@ -128,8 +127,7 @@ export default function Request() {
             />
           </label>
           <label htmlFor="username">
-            <p>SupeHero requested</p>
-
+            <h1>SupeHero requested</h1>
             <textarea
               className="text"
               type="textarea"
@@ -141,7 +139,7 @@ export default function Request() {
           {submitting && <Loading>Submitting Form...</Loading>}
           <Abutton>
             <Sbutton type="submit" className="button">
-              <p2>SUBMIT</p2>
+              <h2>SUBMIT</h2>
             </Sbutton>
           </Abutton>
         </form>
