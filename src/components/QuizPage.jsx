@@ -25,7 +25,8 @@ export default function QuizPage() {
   `;
 
   const Button = styled.div`
-    display: block;
+    display: flex;
+    justify-content: center;
     border: transparent;
     border-radius: 10px;
     padding: 10px 30px;
@@ -49,7 +50,6 @@ export default function QuizPage() {
   const Question = styled.div`
     display: flex;
     justify-content: center;
-
     padding: 10px 30px;
     color: white;
     background-color: #222222;
@@ -75,7 +75,7 @@ export default function QuizPage() {
     margin: 2em auto;
     background-color: transparent;
     border: transparent;
-    margin-top: 40px;
+    margin-top: 150px;
     @media screen and (min-width: 1180px) {
       width: 50%;
     }
@@ -120,6 +120,7 @@ export default function QuizPage() {
       <Answer>
         {questions[currentQuestion].answerOptions.map((answerOption) => (
           <Button
+            key={answerOption.content}
             type="button"
             onClick={() => handleAnswerOptionClick(answerOption)}
           >

@@ -1,6 +1,7 @@
 import { useLocation, Link } from 'react-router-dom';
 import { useState } from 'react';
 import styled from 'styled-components';
+import 'animate.css';
 
 const Result = styled.div`
   .versus.hidden {
@@ -134,13 +135,21 @@ export default function Fight() {
             {resFight === true && (
               <div>
                 <h2>You WIN</h2>
-                <img src={location.state.myHero.image.url} alt="héros" />
+                <img
+                  className="animate__animated animate__zoomInDown"
+                  src={location.state.myHero.image.url}
+                  alt="héros"
+                />
               </div>
             )}
             {resFight === false && (
               <div>
                 <h2>You LOSE</h2>
-                <img src={location.state.vsHero.image.url} alt="vshéros" />
+                <img
+                  className="animate__animated animate__zoomInDown"
+                  src={location.state.vsHero.image.url}
+                  alt="vshéros"
+                />
               </div>
             )}
           </div>
