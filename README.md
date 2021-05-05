@@ -1,3 +1,20 @@
+# P2-G2-HEROES
+
+website based on superheroes universe: 
+when you arrive on the homepage, click on the "quiz" button. Then answer the quiz and get your own superhero.
+Click on "fight" button and confront against a random superhero opponent and see who is the winner!
+
+You can also ask for your favourite superhero on the request page.
+
+# Build with
+
+    React
+    NodeJS
+    Styled-components - Framework CSS
+    Axios
+    React-Router-DOM
+    VS-Code - Command Line Interface
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +85,15 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+# Authors
+
+    Julien Delemarle (alias yulen59)
+    Georges Fortry (alias GEORGES Fortry )
+    Victor Maenhout (alias Maenhout)
+    Antoine Vancompernolle  (alias frvanco)
+    
+    contributor: Loïc Brassart (alias LoicBrassart)
+
+
+
