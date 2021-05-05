@@ -75,7 +75,7 @@ export default function QuizPage() {
     margin: 2em auto;
     background-color: transparent;
     border: transparent;
-    margin-top: 40px;
+    margin-top: 150px;
     @media screen and (min-width: 1180px) {
       width: 50%;
     }
