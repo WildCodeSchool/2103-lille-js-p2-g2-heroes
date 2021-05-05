@@ -4,28 +4,36 @@ import { useState } from 'react';
 const Article = styled.div`
   display: flex;
   flex-direction: column;
-  width: 40%;
+  width: 600px;
   margin: 2em auto;
   background-color: transparent;
   border: transparent;
   margin-top: 200px;
-  @media screen and (min-width: 1180px) {
-      width: 30%;
-
-  h1 {
+  @media screen and (max-width: 650px) {
+    width: 90%;
+  }
+  title {
     display: flex;
     justify-content: center;
     padding: 10px 30px;
+    margin-bottom: 20px;
     color: white;
     background-color: #222222;
     font-family: 'Bebas neue', sans-serif;
-    font-size: 2em;
+    font-size: 3em;
+    border-radius: 5px;
   }
 
   form {
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
+
+  p {
+    display: flex;
+
+    margin-bottom: 20px;
   }
 
   label {
@@ -35,11 +43,14 @@ const Article = styled.div`
     background-color: #222222;
     font-family: 'Bebas neue', sans-serif;
     font-size: 2em;
+    border-radius: 5px;
   }
 
   input {
-    padding: 10px 30px;
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding: 10px 10px 0px 10px;
+
     width: 90%;
     color: #222222;
     background-color: whitesmoke;
@@ -49,8 +60,9 @@ const Article = styled.div`
   }
   textarea {
     height: 10vh;
-    padding: 10px 30px;
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding: 10px 10px 0px 10px;
     width: 90%;
     color: #222222;
     background-color: whitesmoke;
@@ -82,7 +94,7 @@ const Sbutton = styled.button`
 
 const Loading = styled.div`
   font-family: 'Bebas neue', sans-serif;
-  background-color: #222222;
+
   width: 30%;
   color: white;
   font-size: 1.8em;
@@ -102,8 +114,8 @@ export default function Request() {
   return (
     <>
       <Article>
-        <title>Request your own SuperHero</title>
-        {submitting && <Loading>Submitting Form...</Loading>}
+        <title>Request your own SuperHero !</title>
+
         <form className="RequestForm" onSubmit={handleSubmit}>
           <label htmlFor="username">
             <p>LastName</p>
@@ -132,9 +144,10 @@ export default function Request() {
               placeholder="Tell us what a SuperHero you would like to be!"
             />
           </label>
+          {submitting && <Loading>Submitting Form...</Loading>}
           <Abutton>
             <Sbutton type="submit" className="button">
-              <p>SUBMIT</p>
+              <p2>SUBMIT</p2>
             </Sbutton>
           </Abutton>
         </form>
