@@ -4,40 +4,6 @@ import axios from 'axios';
 import { useParams, Link } from 'react-router-dom';
 import heroes from '../heroes.json';
 
-const Hero = styled.div`
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  padding-top: 80px;
-  color: #dedede;
-
-  img {
-    height: 50vh;
-    width: auto;
-
-    border-radius: 5px;
-    box-shadow: 0px 5px 10px black;
-  }
-
-  button {
-    font-family: 'Bebas neue', sans-serif;
-    color: #dedede;
-    font-size: 1.7em;
-    border-radius: 5px;
-    height: 50px;
-    width: 200px;
-    background-color: #c17400;
-    border: 0px;
-    margin-top: 25px;
-    box-shadow: 0px 5px 10px black;
-  }
-
-  a {
-    text-decoration: none;
-    color: #dedede;
-  }
-`;
-
 const rotate360 = keyframes`
   from {
     transform: rotate(0deg);
@@ -48,7 +14,7 @@ const rotate360 = keyframes`
 `;
 
 const Spinner = styled.div`
-  margin: 20vh 50vw;
+  margin: 20vh 48vw;
   padding: 20px;
   animation: ${rotate360} 1s linear infinite;
   transform: translateZ(0);
@@ -62,37 +28,61 @@ const Spinner = styled.div`
   border-radius: 50%;
 `;
 
-const Result = styled.div`
+const Hero = styled.div`
   display: flex;
   align-items: center;
-  @media (max-width: 1000px) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  flex-direction: column;
+  color: #dedede;
+  margin-top: 50px;
+
+  img {
+    max-height: 50vh;
+    border-radius: 5px;
+    box-shadow: 0px 5px 10px black;
+    @media (max-width: 1000px) {
+      margin: 0 auto;
+      margin-bottom: 30px;
+    }
+  }
+
+  button {
+    font-family: 'Bebas neue', sans-serif;
+    color: #dedede;
+    font-size: 1.7em;
+    border-radius: 5px;
+    height: 50px;
+    width: 200px;
+    background-color: #c17400;
+    border: 0px;
+    margin: 30px;
+    box-shadow: 0px 5px 10px black;
+  }
+
+  a {
+    text-decoration: none;
+    color: #dedede;
   }
 `;
 
 const Identity = styled.div`
-  margin-right: 100px;
-  width: 30vw;
-  font-size: 1.3em;
-  line-height: 1.3em;
+  max-width: 50vw;
+  margin-right: 30px;
+  font-size: 1em;
+  line-height: 1.5em;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 5px;
   padding: 1.5em;
-  @media (max-width: 1440px) {
-    width: 40vw;
   }
   @media (max-width: 1000px) {
-    margin-top: 1em;
     margin-right: 0px;
+    max-width: 80vw;
   }
 
   h1 {
     font-family: 'Bebas neue', sans-serif;
     font-size: 2.4em;
-    margin-top: 1em;
-    margin-bottom: 1em;
+    margin-top: 0.7em;
+    margin-bottom: 0.7em;
     text-align: center;
   }
 
@@ -102,15 +92,23 @@ const Identity = styled.div`
   }
 
   h2 {
-    padding-bottom: 0.5em;
+    padding-bottom: 1em;
   }
 
   h4 {
-    padding-bottom: 0.5em;
+    padding-bottom: 1em;
   }
 
   h5 {
-    padding-bottom: 0.5em;
+    padding-bottom: 1em;
+  }
+`;
+
+const Result = styled.div`
+  display: flex;
+  @media (max-width: 1000px) {
+    flex-direction: column-reverse;
+    margin-right: 0px;
   }
 `;
 
