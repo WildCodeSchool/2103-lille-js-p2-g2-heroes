@@ -3,9 +3,6 @@ import { Link } from 'react-router-dom';
 import logo from '../superhero.gif';
 
 const Sh1 = styled.h1`
-  display: flex;
-  align-items: center;
-  justify-content: center;
   font-family: 'Bebas neue', sans-serif;
   font-size: 3em;
   color: #dedede;
@@ -20,10 +17,9 @@ const Sh1 = styled.h1`
 const ButtonWrapper = styled.section`
   background-color: #222222;
   display: flex;
-
   justify-content: space-around;
-  padding-left: 20vw;
-  padding-right: 20vw;
+
+  padding-right: 30vw;
   box-shadow: 0px 5px 10px black;
   @media (max-width: 768px) {
     padding-left: 5vw;
@@ -35,7 +31,7 @@ const Button = styled.button`
   font-family: 'Bebas neue', sans-serif;
   color: #dedede;
   background-color: #222222;
-  font-size: 1.7em;
+  font-size: 2em;
   border: none;
   position: relative;
   cursor: pointer;
@@ -67,14 +63,13 @@ const Button = styled.button`
 const Slink = styled(Link)`
   display: flex;
   align-items: center;
-
   text-decoration: none;
   color: inherit;
-  margin-top: 0.2em;
 `;
 
 const Myimg = styled.img`
   width: 1.5em;
+
   height: 1.5em;
   margin-right: 0.2em;
   border-radius: 100px;
@@ -83,14 +78,15 @@ const Myimg = styled.img`
 export default function Header() {
   return (
     <header>
-      <Sh1>
-        <Slink to="/">
-          <Myimg src={logo} alt="Logo" />
-          <p>SUPER HEROES</p>
-        </Slink>
-      </Sh1>
       <nav>
         <ButtonWrapper>
+          <Sh1>
+            <Slink to="/">
+              <Myimg src={logo} alt="Logo" />
+              <p>SUPER HEROES</p>
+            </Slink>
+          </Sh1>
+
           <Button>
             <Slink to="/quiz">QUIZ</Slink>
           </Button>
