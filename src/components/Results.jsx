@@ -74,7 +74,6 @@ const Identity = styled.div`
   padding: 1.5em;
   }
   @media (max-width: 1000px) {
-    margin-right: 0px;
     max-width: 80vw;
   }
 
