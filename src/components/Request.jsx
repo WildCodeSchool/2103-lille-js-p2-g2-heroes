@@ -32,7 +32,6 @@ const Article = styled.div`
 
   p {
     display: flex;
-
     margin-bottom: 20px;
   }
 
@@ -47,11 +46,7 @@ const Article = styled.div`
   }
 
   input {
-    display: flex;
-    justify-content: center;
-    padding: 10px 10px 0px 10px;
-
-    width: 90%;
+    width: 100%;
     color: #222222;
     background-color: whitesmoke;
     border-radius: 5px;
@@ -62,8 +57,7 @@ const Article = styled.div`
     height: 10vh;
     display: flex;
     justify-content: center;
-    padding: 10px 10px 0px 10px;
-    width: 90%;
+    width: 100%;
     color: #222222;
     background-color: whitesmoke;
     border-radius: 5px;
