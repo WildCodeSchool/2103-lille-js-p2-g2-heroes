@@ -8,16 +8,13 @@ const Hero = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-
-  h1 {
-    font-family: 'Bebas neue', sans-serif;
-    font-size: 2.4em;
-    color: #dedede;
-    margin: 0.5em;
-  }
+  padding-top: 80px;
+  color: #dedede;
 
   img {
     height: 50vh;
+    width: auto;
+
     border-radius: 5px;
     box-shadow: 0px 5px 10px black;
   }
@@ -65,6 +62,58 @@ const Spinner = styled.div`
   border-radius: 50%;
 `;
 
+const Result = styled.div`
+  display: flex;
+  align-items: center;
+  @media (max-width: 1000px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+`;
+
+const Identity = styled.div`
+  margin-right: 100px;
+  width: 30vw;
+  font-size: 1.3em;
+  line-height: 1.3em;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  padding: 1.5em;
+  @media (max-width: 1440px) {
+    width: 40vw;
+  }
+  @media (max-width: 1000px) {
+    margin-top: 1em;
+    margin-right: 0px;
+  }
+
+  h1 {
+    font-family: 'Bebas neue', sans-serif;
+    font-size: 2.4em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    text-align: center;
+  }
+
+  p {
+    font-size: 1.4em;
+    text-align: center;
+  }
+
+  h2 {
+    padding-bottom: 0.5em;
+  }
+
+  h4 {
+    padding-bottom: 0.5em;
+  }
+
+  h5 {
+    padding-bottom: 0.5em;
+  }
+`;
+
 export default function Results() {
   const { int, spe, str, pow } = useParams();
   const [myHeroes, setMyHeroes] = useState([]);
@@ -101,7 +150,7 @@ export default function Results() {
     setTimeout(() => {
       setMyHeroes(
         tmpHeroes.filter(
-          (hero) => parseInt(hero.powerstats[chosenStat], 10) > 80
+          (hero) => parseInt(hero.powerstats[chosenStat], 10) > 85
         )
       );
     }, 1000);
@@ -111,22 +160,30 @@ export default function Results() {
     <>
       {myHeroes.length === 0 && <Spinner />}
       {myHeroes.length > 0 && (
-        <div className="hero">
-          <Hero>
-            <h1>{`You are ${myHeroes[0].name}`}</h1>
-            <img src={myHeroes[0].image.url} alt="" />
-            <button type="button" className="button">
-              <Link
-                to={{
-                  pathname: '/Fight',
-                  state: { myHero: myHeroes[0], vsHero: myHeroes[1] },
-                }}
-              >
-                FIGHT
-              </Link>
-            </button>
-          </Hero>
-        </div>
+        <Hero>
+          <Result>
+            <Identity>
+              <p>You are</p>
+              <h1>{myHeroes[0].name}</h1>
+              <h2>{`Full Name : ${myHeroes[0].biography['full-name']}`} </h2>
+              <h3>{`Gender : ${myHeroes[0].appearance.gender}`}</h3>
+              <h4>{`Height : ${myHeroes[0].appearance.height[1]}, Weight : ${myHeroes[0].appearance.weight[1]}`}</h4>
+              <h5>{`Work : ${myHeroes[0].work.occupation} in ${myHeroes[0].work.base}`}</h5>
+              <h6>{`Groups : ${myHeroes[0].connections['group-affiliation']}`}</h6>
+            </Identity>
+            <img src={myHeroes[0].image.url} alt="my Hero" />
+          </Result>
+          <button type="button" className="button">
+            <Link
+              to={{
+                pathname: '/Fight',
+                state: { myHero: myHeroes[0], vsHero: myHeroes[1] },
+              }}
+            >
+              FIGHT
+            </Link>
+          </button>
+        </Hero>
       )}
     </>
   );
