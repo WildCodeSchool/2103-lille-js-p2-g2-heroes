@@ -25,7 +25,8 @@ export default function QuizPage() {
   `;
 
   const Button = styled.div`
-    display: block;
+    display: flex;
+    justify-content: center;
     border: transparent;
     border-radius: 10px;
     padding: 10px 30px;
@@ -49,7 +50,6 @@ export default function QuizPage() {
   const Question = styled.div`
     display: flex;
     justify-content: center;
-
     padding: 10px 30px;
     color: white;
     background-color: #222222;
