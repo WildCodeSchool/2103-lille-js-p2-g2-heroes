@@ -55,6 +55,62 @@ const Sbutton = styled.div`
   }
 `;
 
+const Versus = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  button {
+    font-family: 'Bebas neue', sans-serif;
+    color: #dedede;
+    font-size: 1.7em;
+    border-radius: 5px;
+    height: 50px;
+    width: 350px;
+    background-color: #c17400;
+    border: 0px;
+    margin: 30px;
+    box-shadow: 0px 5px 10px black;
+  }
+`;
+
+const Heroes = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+
+  img {
+    max-height: 50vh;
+    border-radius: 5px;
+    box-shadow: 0px 5px 10px black;
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-bottom: 0px;
+  }
+`;
+
+const Battle = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+
+  img {
+    max-height: 50vh;
+    border-radius: 5px;
+    box-shadow: 0px 5px 10px black;
+  }
+
+  h2 {
+    text-align: center;
+    font-family: 'Bebas neue', sans-serif;
+    font-size: 6em;
+    color: #dedede;
+    margin-bottom: 20px;
+  }
+`;
+
 export default function Fight() {
   const location = useLocation();
   const [resFight, setResFight] = useState(null);
@@ -117,42 +173,48 @@ export default function Fight() {
       ) : (
         <Result>
           <div className={`versus ${isActive ? 'hidden' : ''}`}>
-            <img src={location.state.myHero.image.url} alt="héros" />
-            <p>VS</p>
-            <img src={location.state.vsHero.image.url} alt="vshéros" />
-            <button
-              onClick={() => {
-                result();
-                handleToggle();
-              }}
-              type="button"
-            >
-              Ready for the fight... Come on !
-            </button>
+            <Versus>
+              <Heroes>
+                <img src={location.state.myHero.image.url} alt="héros" />
+                <p>VS</p>
+                <img src={location.state.vsHero.image.url} alt="vshéros" />
+              </Heroes>
+              <button
+                onClick={() => {
+                  result();
+                  handleToggle();
+                }}
+                type="button"
+              >
+                Ready for the fight... Come on !
+              </button>
+            </Versus>
           </div>
-          <div>
-            {resFight === null && <></>}
-            {resFight === true && (
-              <div>
-                <h2>You WIN</h2>
-                <img
-                  className="animate__animated animate__zoomInDown"
-                  src={location.state.myHero.image.url}
-                  alt="héros"
-                />
-              </div>
-            )}
-            {resFight === false && (
-              <div>
-                <h2>You LOSE</h2>
-                <img
-                  className="animate__animated animate__zoomInDown"
-                  src={location.state.vsHero.image.url}
-                  alt="vshéros"
-                />
-              </div>
-            )}
-          </div>
+          <Battle>
+            <div>
+              {resFight === null && <></>}
+              {resFight === true && (
+                <div>
+                  <h2>You WIN !</h2>
+                  <img
+                    className="animate__animated animate__zoomInDown"
+                    src={location.state.myHero.image.url}
+                    alt="héros"
+                  />
+                </div>
+              )}
+              {resFight === false && (
+                <div>
+                  <h2>You LOSE</h2>
+                  <img
+                    className="animate__animated animate__zoomInDown"
+                    src={location.state.vsHero.image.url}
+                    alt="vshéros"
+                  />
+                </div>
+              )}
+            </div>
+          </Battle>
         </Result>
       )}
     </>
