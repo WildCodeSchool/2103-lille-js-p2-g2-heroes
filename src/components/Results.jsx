@@ -51,6 +51,7 @@ const Hero = styled.div`
     font-size: 1.7em;
     border-radius: 5px;
     height: 50px;
+    cursor: pointer;
     width: 200px;
     background-color: #c17400;
     border: 0px;
@@ -170,16 +171,17 @@ export default function Results() {
             </Identity>
             <img src={myHeroes[0].image.url} alt="my Hero" />
           </Result>
-          <button type="button" className="button">
-            <Link
-              to={{
-                pathname: '/Fight',
-                state: { myHero: myHeroes[0], vsHero: myHeroes[1] },
-              }}
-            >
+
+          <Link
+            to={{
+              pathname: '/Fight',
+              state: { myHero: myHeroes[0], vsHero: myHeroes[1] },
+            }}
+          >
+            <button type="button" className="button">
               FIGHT
-            </Link>
-          </button>
+            </button>
+          </Link>
         </Hero>
       )}
     </>
