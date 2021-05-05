@@ -47,9 +47,16 @@ const Article = styled.div`
     font-family: 'Bebas neue', sans-serif;
     font-size: 1em;
   }
-  .text {
+  textarea {
     height: 10vh;
-    text-align: start;
+    padding: 10px 30px;
+    margin: 0 auto;
+    width: 90%;
+    color: #222222;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    font-family: 'Bebas neue', sans-serif;
+    font-size: 1em;
   }
 `;
 
@@ -73,6 +80,14 @@ const Sbutton = styled.button`
   box-shadow: 0px 5px 10px black;
 `;
 
+const Loading = styled.div`
+  font-family: 'Bebas neue', sans-serif;
+  background-color: #222222;
+  width: 30%;
+  color: white;
+  font-size: 1.8em;
+`;
+
 export default function Request() {
   const [submitting, setSubmitting] = useState(false);
   const handleSubmit = (event) => {
@@ -88,7 +103,7 @@ export default function Request() {
     <>
       <Article>
         <title>Request your own SuperHero</title>
-        {submitting && <div>Submitting Form...</div>}
+        {submitting && <Loading>Submitting Form...</Loading>}
         <form className="RequestForm" onSubmit={handleSubmit}>
           <label htmlFor="username">
             <p>LastName</p>
@@ -109,7 +124,7 @@ export default function Request() {
           <label htmlFor="username">
             <p>SupeHero requested</p>
 
-            <input
+            <textarea
               className="text"
               type="textarea"
               name="textValue"
