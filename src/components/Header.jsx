@@ -7,7 +7,6 @@ const Myimg = styled.img`
   height: 1.5em;
   margin-right: 0.2em;
   border-radius: 100px;
-  display: none;
 `;
 
 const Sh1 = styled.h1`
@@ -23,13 +22,11 @@ const Sh1 = styled.h1`
     font-size: 2.9em;
     margin-right: 0px;
   }
-  display: none;
 `;
 
 const ButtonWrapper = styled.section`
   background-color: #222222;
   display: flex;
-
   justify-content: space-around;
   padding-left: 20vw;
   padding-right: 20vw;
@@ -76,7 +73,6 @@ const Button = styled.button`
 const Slink = styled(Link)`
   display: flex;
   align-items: center;
-
   text-decoration: none;
   color: inherit;
   margin-top: 0.2em;
