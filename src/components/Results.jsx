@@ -14,7 +14,7 @@ const rotate360 = keyframes`
 `;
 
 const Spinner = styled.div`
-  margin: 20vh 48vw;
+  margin: 30vh 47vw;
   padding: 20px;
   animation: ${rotate360} 1s linear infinite;
   transform: translateZ(0);
@@ -33,7 +33,7 @@ const Hero = styled.div`
   align-items: center;
   flex-direction: column;
   color: #dedede;
-  margin-top: 50px;
+  margin-top: 15vh;
 
   img {
     max-height: 50vh;

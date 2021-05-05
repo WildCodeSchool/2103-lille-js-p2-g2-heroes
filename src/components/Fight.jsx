@@ -12,11 +12,11 @@ const Result = styled.div`
 const Conditional = styled.div`
   p {
     text-align: center;
-    margin: 5em auto 2em;
+    margin: 25vh auto 5vh;
     padding: 30px;
     border: transparent;
     border-radius: 10px;
-    width: 50%;
+    width: 40%;
     color: white;
     background-color: #222222;
     font-family: 'Bebas neue', sans-serif;
@@ -69,7 +69,7 @@ const Versus = styled.div`
     width: 350px;
     background-color: #c17400;
     border: 0px;
-    margin: 30px;
+    margin: 50px;
     box-shadow: 0px 5px 10px black;
   }
 `;
@@ -78,15 +78,37 @@ const Heroes = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 100px;
+  margin-top: 15vh;
 
   img {
     max-height: 50vh;
     border-radius: 5px;
     box-shadow: 0px 5px 10px black;
-    margin-right: 50px;
-    margin-left: 50px;
+    margin-right: 20px;
+    margin-left: 20px;
     margin-bottom: 0px;
+  }
+
+  .txtVersus {
+    display: none;
+    @media (max-width: 800px) {
+      display: block;
+      font-family: 'Bebas neue', sans-serif;
+      color: #dedede;
+      font-size: 3em;
+      margin: 20px;
+    }
+  }
+
+  .versus {
+    box-shadow: none;
+    @media (max-width: 800px) {
+      display: none;
+    }
+  }
+  @media (max-width: 800px) {
+    flex-direction: column;
+    margin-top: 50px;
   }
 `;
 
@@ -94,7 +116,7 @@ const Battle = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
+  margin-top: 8vh;
 
   img {
     max-height: 50vh;
@@ -176,7 +198,8 @@ export default function Fight() {
             <Versus>
               <Heroes>
                 <img src={location.state.myHero.image.url} alt="héros" />
-                <p>VS</p>
+                <img className="versus" src="/versus.svg" alt="versus" />
+                <h2 className="txtVersus">VERSUS</h2>
                 <img src={location.state.vsHero.image.url} alt="vshéros" />
               </Heroes>
               <button
