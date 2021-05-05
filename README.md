@@ -13,6 +13,7 @@ You can also ask for your favourite superhero on the request page.
     Styled-components - Framework CSS
     Axios
     React-Router-DOM
+    Animate.css (npm)
     VS-Code - Command Line Interface
 
 # Getting Started with Create React App
