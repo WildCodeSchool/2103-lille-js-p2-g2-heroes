@@ -25,12 +25,8 @@ export default function QuizPage() {
   `;
 
   const Button = styled.div`
-<<<<<<< HEAD
     display: flex;
     justify-content: center;
-=======
-    display: block;
->>>>>>> b5b1c08bd5d8dbacfdf41e1941ba01e9a02acff3
     border: transparent;
     border-radius: 10px;
     padding: 10px 30px;
@@ -79,7 +75,7 @@ export default function QuizPage() {
     margin: 2em auto;
     background-color: transparent;
     border: transparent;
-    margin-top: 40px;
+    margin-top: 150px;
     @media screen and (min-width: 1180px) {
       width: 50%;
     }
