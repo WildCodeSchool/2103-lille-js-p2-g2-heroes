@@ -4,28 +4,35 @@ import { useState } from 'react';
 const Article = styled.div`
   display: flex;
   flex-direction: column;
-  width: 40%;
+  width: 600px;
   margin: 2em auto;
   background-color: transparent;
   border: transparent;
   margin-top: 200px;
-  @media screen and (min-width: 1180px) {
-      width: 30%;
-
-  h1 {
+  @media screen and (max-width: 650px) {
+    width: 90%;
+  }
+  title {
     display: flex;
     justify-content: center;
     padding: 10px 30px;
+    margin-bottom: 20px;
     color: white;
     background-color: #222222;
     font-family: 'Bebas neue', sans-serif;
-    font-size: 2em;
+    font-size: 3em;
+    border-radius: 5px;
   }
 
   form {
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
+
+  h2 {
+    display: flex;
+    margin-bottom: 20px;
   }
 
   label {
@@ -35,12 +42,11 @@ const Article = styled.div`
     background-color: #222222;
     font-family: 'Bebas neue', sans-serif;
     font-size: 2em;
+    border-radius: 5px;
   }
 
   input {
-    padding: 10px 30px;
-    margin: 0 auto;
-    width: 90%;
+    width: 100%;
     color: #222222;
     background-color: whitesmoke;
     border-radius: 5px;
@@ -49,9 +55,9 @@ const Article = styled.div`
   }
   textarea {
     height: 10vh;
-    padding: 10px 30px;
-    margin: 0 auto;
-    width: 90%;
+    display: flex;
+    justify-content: center;
+    width: 100%;
     color: #222222;
     background-color: whitesmoke;
     border-radius: 5px;
@@ -82,7 +88,6 @@ const Sbutton = styled.button`
 
 const Loading = styled.div`
   font-family: 'Bebas neue', sans-serif;
-  background-color: #222222;
   width: 30%;
   color: white;
   font-size: 1.8em;
@@ -102,19 +107,19 @@ export default function Request() {
   return (
     <>
       <Article>
-        <title>Request your own SuperHero</title>
-        {submitting && <Loading>Submitting Form...</Loading>}
+        <title>Request your own SuperHero !</title>
+
         <form className="RequestForm" onSubmit={handleSubmit}>
           <label htmlFor="username">
-            <p>LastName</p>
+            <h2>LastName</h2>
             <input placeholder="Parker" name="lastname" id="username" />
           </label>
           <label htmlFor="username">
-            <p>FirstName</p>
+            <h2>FirstName</h2>
             <input placeholder="Peter" name="firstname" id="username" />
           </label>
           <label htmlFor="username">
-            <p>email</p>
+            <h2>email</h2>
             <input
               placeholder="peter.parker@nyc.us"
               name="email"
@@ -122,8 +127,7 @@ export default function Request() {
             />
           </label>
           <label htmlFor="username">
-            <p>SupeHero requested</p>
-
+            <h2>SupeHero requested</h2>
             <textarea
               className="text"
               type="textarea"
@@ -132,9 +136,10 @@ export default function Request() {
               placeholder="Tell us what a SuperHero you would like to be!"
             />
           </label>
+          {submitting && <Loading>Submitting Form...</Loading>}
           <Abutton>
             <Sbutton type="submit" className="button">
-              <p>SUBMIT</p>
+              <h3>SUBMIT</h3>
             </Sbutton>
           </Abutton>
         </form>
