@@ -1,9 +1,5 @@
 import styled from 'styled-components';
 
-const SShadow = styled.div`
-  /* box-shadow: 0 50vh 0 50vh #222222; */
-`;
-
 const SFooter = styled.footer`
   position: absolute;
   bottom: 0;
@@ -35,16 +31,14 @@ const SCopyright = styled.div`
 
 export default function Footer() {
   return (
-    <SShadow>
-      <SFooter>
-        <SCopyright>
-          <p className="description">
-            The images used are not free of rights. For any request to remove an
-            image that you own, please contact the following email address:
-            ramdom@contact.com
-          </p>
-        </SCopyright>
-      </SFooter>
-    </SShadow>
+    <SFooter>
+      <SCopyright>
+        <p className="description">
+          The images used are not free of rights. For any request to remove an
+          image that you own, please contact the following email address:
+          ramdom@contact.com
+        </p>
+      </SCopyright>
+    </SFooter>
   );
 }
