@@ -73,7 +73,7 @@ const Identity = styled.div`
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 5px;
   padding: 1.5em;
-  }
+
   @media (max-width: 1000px) {
     max-width: 80vw;
   }
