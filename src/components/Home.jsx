@@ -51,10 +51,9 @@ const Spicture = styled.picture`
   .superGirl {
     width: 56vh;
     margin-top: 5vh;
-    }
-    @media (max-width: 1000px) {
-      display: none;
-    }
+  }
+  @media (max-width: 1000px) {
+    display: none;
   }
 `;
 
