@@ -8,7 +8,7 @@ const Article = styled.div`
   margin: 2em auto;
   background-color: transparent;
   border: transparent;
-  margin-top: 200px;
+  margin-top: 30px;
   @media screen and (max-width: 650px) {
     width: 90%;
   }
