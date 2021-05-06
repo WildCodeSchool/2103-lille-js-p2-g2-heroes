@@ -3,34 +3,38 @@ import { Link } from 'react-router-dom';
 import logo from '../superhero.gif';
 
 const Myimg = styled.img`
-  width: 1.5em;
-  height: 1.5em;
+  width: 1.3em;
+  height: 1.3em;
   margin-right: 0.2em;
   border-radius: 100px;
 `;
 
 const Sh1 = styled.h1`
   font-family: 'Bebas neue', sans-serif;
-  font-size: 3em;
+  font-size: 2.2em;
   color: #dedede;
-  margin-right: 60px;
-  padding: 10px;
-  @media (max-width: 768px) {
-    font-size: 2.9em;
-    margin-right: 0px;
+  padding: 8px;
+
+  p {
+    margin-top: 2px;
+    @media (max-width: 600px) {
+      display: none;
+    }
   }
 `;
 
 const ButtonWrapper = styled.section`
   background-color: #222222;
   display: flex;
-  justify-content: space-around;
-
+  justify-content: space-between;
   padding-right: 30vw;
   box-shadow: 0px 5px 10px black;
   @media (max-width: 768px) {
     padding-left: 5vw;
     padding-right: 5vw;
+  }
+  @media (max-width: 600px) {
+    justify-content: space-around;
   }
 `;
 
@@ -42,8 +46,8 @@ const Button = styled.button`
   border: none;
   position: relative;
   cursor: pointer;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 10px;
+  padding-bottom: 8px;
   &:hover {
     background-color: transparent;
     transform: translateY(-0.5rem) scale(1.02);
