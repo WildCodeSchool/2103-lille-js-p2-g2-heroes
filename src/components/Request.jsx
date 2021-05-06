@@ -8,7 +8,7 @@ const Article = styled.div`
   margin: 2em auto;
   background-color: transparent;
   border: transparent;
-  margin-top: 30px;
+  margin-top: 10vh;
   @media screen and (max-width: 650px) {
     width: 90%;
   }
@@ -16,11 +16,11 @@ const Article = styled.div`
     display: flex;
     justify-content: center;
     padding: 10px 30px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     color: white;
     background-color: #222222;
     font-family: 'Bebas neue', sans-serif;
-    font-size: 3em;
+    font-size: 2em;
     border-radius: 5px;
   }
 
@@ -32,21 +32,21 @@ const Article = styled.div`
 
   h2 {
     display: flex;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 
   label {
     padding: 20px 20px;
-    margin: 10px 0px 10px 0px;
+    margin: 5px 0px 5px 0px;
     color: white;
     background-color: #222222;
     font-family: 'Bebas neue', sans-serif;
-    font-size: 2em;
+    font-size: 1.5em;
     border-radius: 5px;
   }
 
   input {
-    width: 100%;
+    width: 98%;
     color: #222222;
     background-color: whitesmoke;
     border-radius: 5px;
@@ -57,7 +57,7 @@ const Article = styled.div`
     height: 10vh;
     display: flex;
     justify-content: center;
-    width: 100%;
+    width: 98%;
     color: #222222;
     background-color: whitesmoke;
     border-radius: 5px;
@@ -82,7 +82,7 @@ const Sbutton = styled.button`
   border: 0px;
   margin: 0 auto;
   margin-top: 25px;
-  margin-bottom: 20vh;
+  margin-bottom: 50px;
   box-shadow: 0px 5px 10px black;
 `;
 
